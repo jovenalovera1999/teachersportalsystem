@@ -1,0 +1,187 @@
+html {
+  scroll-behavior: smooth;
+}
+
+#custom-card-header {
+  background: #1E90FF;
+  color: #fff;
+}
+
+.custom-icon-size {
+  font-size: 20px;
+}
+
+#custom-logo-size {
+  width: 110px;
+  height: 110px;
+}
+
+#custom-button-color {
+  background: #1E90FF;
+  color: #fff;
+}
+
+button {
+  -webkit-transition: .3s all ease;
+  -o-transition: .3s all ease;
+  transition: .3s all ease; }
+  button:hover, button:focus {
+    text-decoration: none !important;
+    outline: none !important;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important; }
+
+#sidebar {
+  min-width: 270px;
+  max-width: 270px;
+  background: #1E90FF;
+  color: #fff;
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+  position: relative; }
+  #sidebar .h6 {
+    color: #fff; }
+  #sidebar.active {
+    margin-left: -270px; }
+  #sidebar h1 {
+    margin-bottom: 20px;
+    font-weight: 700;
+    font-size: 30px; }
+    #sidebar h1 .logo {
+      text-decoration: none;
+      color: #fff; }
+      #sidebar h1 .logo span {
+        font-size: 14px;
+        color: #44bef1;
+        display: block; }
+  #sidebar ul.components {
+    padding: 0; }
+  #sidebar ul li {
+    font-size: 16px; }
+    #sidebar ul li > ul {
+      margin-left: 10px; }
+      #sidebar ul li > ul li {
+        font-size: 14px; }
+    #sidebar ul li a {
+      text-decoration: none;
+      padding: 10px 0;
+      display: block;
+      color: rgba(255, 255, 255, 0.6);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1); }
+      #sidebar ul li a span {
+        color: #44bef1; }
+      #sidebar ul li a:hover {
+        color: #fff; }
+    #sidebar ul li.active > a {
+      background: transparent;
+      color: #fff; }
+  @media (max-width: 991.98px) {
+    #sidebar {
+      margin-left: -270px; }
+      #sidebar.active {
+        margin-left: 0; } }
+  #sidebar .custom-menu {
+    display: inline-block;
+    position: absolute;
+    top: 20px;
+    right: 0;
+    margin-right: -20px;
+    -webkit-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s; }
+    @media (prefers-reduced-motion: reduce) {
+      #sidebar .custom-menu {
+        -webkit-transition: none;
+        -o-transition: none;
+        transition: none; } }
+    #sidebar .custom-menu .btn {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      position: relative; }
+      #sidebar .custom-menu .btn i {
+        margin-right: -40px;
+        font-size: 14px; }
+      #sidebar .custom-menu .btn.btn-primary {
+        background: transparent;
+        border-color: transparent; }
+        #sidebar .custom-menu .btn.btn-primary:after {
+          z-index: -1;
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          content: '';
+          -webkit-transform: rotate(45deg);
+          -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
+          background: #1E90FF;
+          border-radius: 10px; }
+        #sidebar .custom-menu .btn.btn-primary:hover, #sidebar .custom-menu .btn.btn-primary:focus {
+          background: transparent !important;
+          border-color: transparent !important; }
+
+a[data-toggle="collapse"] {
+  position: relative; }
+
+.dropdown-toggle::after {
+  display: block;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%); }
+
+@media (max-width: 991.98px) {
+  #sidebarCollapse span {
+    display: none; } }
+
+#content {
+  width: 100%;
+  padding: 0;
+  min-height: 100vh;
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s; }
+
+.form-group>label {
+  top: 40px;
+  left: 5px;
+  position: relative;
+  background-color: #fff;
+  padding: 0px 5px 0px 5px;
+  font-size: 1em;
+  transition: 0.2s;
+  pointer-events: none;
+}
+
+.form-group.label-animate>label {
+  top: 15px !important;
+  left: 5px !important;
+  font-size: 0.7em;
+  color: #1E90FF;
+}
+
+textarea:focus,
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="datetime"]:focus,
+input[type="datetime-local"]:focus,
+input[type="date"]:focus,
+input[type="month"]:focus,
+input[type="time"]:focus,
+input[type="week"]:focus,
+input[type="number"]:focus,
+input[type="email"]:focus,
+input[type="url"]:focus,
+input[type="search"]:focus,
+input[type="tel"]:focus,
+input[type="color"]:focus,
+.uneditable-input:focus {   
+  border-color: #1E90FF;
+  box-shadow: 0 0px 0px #1E90FF;
+  outline: 0 none;
+}

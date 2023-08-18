@@ -1,0 +1,729 @@
+ERROR - 2023-08-18 03:24:43 --> Error connecting to the database: mysqli_sql_exception: Access denied for user ''@'localhost' (using password: NO) in C:\xampp\htdocs\teachersportalsystem\system\Database\MySQLi\Connection.php:174
+Stack trace:
+#0 C:\xampp\htdocs\teachersportalsystem\system\Database\MySQLi\Connection.php(174): mysqli->real_connect('localhost', '', '', '', 3306, '', 0)
+#1 C:\xampp\htdocs\teachersportalsystem\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\teachersportalsystem\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\teachersportalsystem\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\teachersportalsystem\system\Validation\StrictRules\Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\teachersportalsystem\system\Validation\Validation.php(278): CodeIgniter\Validation\StrictRules\Rules->is_unique('joven@email.com', 'email_address', Array, NULL, 'email_address')
+#6 C:\xampp\htdocs\teachersportalsystem\system\Validation\Validation.php(182): CodeIgniter\Validation\Validation->processRules('email_address', 'email address', 'joven@email.com', Array, Array)
+#7 C:\xampp\htdocs\teachersportalsystem\system\Controller.php(141): CodeIgniter\Validation\Validation->run()
+#8 C:\xampp\htdocs\teachersportalsystem\app\Controllers\Teacher.php(30): CodeIgniter\Controller->validate(Array)
+#9 C:\xampp\htdocs\teachersportalsystem\system\CodeIgniter.php(932): App\Controllers\Teacher->register()
+#10 C:\xampp\htdocs\teachersportalsystem\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Teacher))
+#11 C:\xampp\htdocs\teachersportalsystem\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\teachersportalsystem\index.php(67): CodeIgniter\CodeIgniter->run()
+#13 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user ''@'localhost' (using password: NO) in C:\xampp\htdocs\teachersportalsystem\system\Database\MySQLi\Connection.php:218
+Stack trace:
+#0 C:\xampp\htdocs\teachersportalsystem\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\teachersportalsystem\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\teachersportalsystem\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#3 C:\xampp\htdocs\teachersportalsystem\system\Validation\StrictRules\Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\teachersportalsystem\system\Validation\Validation.php(278): CodeIgniter\Validation\StrictRules\Rules->is_unique('joven@email.com', 'email_address', Array, NULL, 'email_address')
+#5 C:\xampp\htdocs\teachersportalsystem\system\Validation\Validation.php(182): CodeIgniter\Validation\Validation->processRules('email_address', 'email address', 'joven@email.com', Array, Array)
+#6 C:\xampp\htdocs\teachersportalsystem\system\Controller.php(141): CodeIgniter\Validation\Validation->run()
+#7 C:\xampp\htdocs\teachersportalsystem\app\Controllers\Teacher.php(30): CodeIgniter\Controller->validate(Array)
+#8 C:\xampp\htdocs\teachersportalsystem\system\CodeIgniter.php(932): App\Controllers\Teacher->register()
+#9 C:\xampp\htdocs\teachersportalsystem\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Teacher))
+#10 C:\xampp\htdocs\teachersportalsystem\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\teachersportalsystem\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2023-08-18 03:24:43 --> Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user ''@'localhost' (using password: NO)
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT 1
+FROM `tbl_users`
+WHERE `email_address` = :email_address:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Validation\StrictRules\Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\Validation\Validation.php(278): CodeIgniter\Validation\StrictRules\Rules->is_unique('joven@email.com', 'email_address', [...], null, 'email_address')
+ 5 SYSTEMPATH\Validation\Validation.php(182): CodeIgniter\Validation\Validation->processRules('email_address', 'email address', 'joven@email.com', [...], [...])
+ 6 SYSTEMPATH\Controller.php(141): CodeIgniter\Validation\Validation->run()
+ 7 APPPATH\Controllers\Teacher.php(30): CodeIgniter\Controller->validate([...])
+ 8 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Teacher->register()
+ 9 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Teacher))
+10 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-18 03:25:36 --> "password" is not a valid rule.
+in SYSTEMPATH\Validation\Validation.php on line 286.
+ 1 SYSTEMPATH\Validation\Validation.php(286): CodeIgniter\Validation\Exceptions\ValidationException::forRuleNotFound('password')
+ 2 SYSTEMPATH\Validation\Validation.php(182): CodeIgniter\Validation\Validation->processRules('password', 'password', 'pass123', [...], [...])
+ 3 SYSTEMPATH\Controller.php(141): CodeIgniter\Validation\Validation->run()
+ 4 APPPATH\Controllers\Teacher.php(30): CodeIgniter\Controller->validate([...])
+ 5 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Teacher->register()
+ 6 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Teacher))
+ 7 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-08-18 03:29:18 --> Error connecting to the database: mysqli_sql_exception: Access denied for user ''@'localhost' (using password: NO) in C:\xampp\htdocs\teachersportalsystem\system\Database\MySQLi\Connection.php:174
+Stack trace:
+#0 C:\xampp\htdocs\teachersportalsystem\system\Database\MySQLi\Connection.php(174): mysqli->real_connect('localhost', '', '', '', 3306, '', 0)
+#1 C:\xampp\htdocs\teachersportalsystem\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\teachersportalsystem\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\teachersportalsystem\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\teachersportalsystem\system\Validation\StrictRules\Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\teachersportalsystem\system\Validation\Validation.php(278): CodeIgniter\Validation\StrictRules\Rules->is_unique('joven@email.com', 'email_address', Array, NULL, 'email_address')
+#6 C:\xampp\htdocs\teachersportalsystem\system\Validation\Validation.php(182): CodeIgniter\Validation\Validation->processRules('email_address', 'email address', 'joven@email.com', Array, Array)
+#7 C:\xampp\htdocs\teachersportalsystem\system\Controller.php(141): CodeIgniter\Validation\Validation->run()
+#8 C:\xampp\htdocs\teachersportalsystem\app\Controllers\Teacher.php(30): CodeIgniter\Controller->validate(Array)
+#9 C:\xampp\htdocs\teachersportalsystem\system\CodeIgniter.php(932): App\Controllers\Teacher->register()
+#10 C:\xampp\htdocs\teachersportalsystem\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Teacher))
+#11 C:\xampp\htdocs\teachersportalsystem\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\teachersportalsystem\index.php(67): CodeIgniter\CodeIgniter->run()
+#13 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user ''@'localhost' (using password: NO) in C:\xampp\htdocs\teachersportalsystem\system\Database\MySQLi\Connection.php:218
+Stack trace:
+#0 C:\xampp\htdocs\teachersportalsystem\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\teachersportalsystem\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\teachersportalsystem\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#3 C:\xampp\htdocs\teachersportalsystem\system\Validation\StrictRules\Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\teachersportalsystem\system\Validation\Validation.php(278): CodeIgniter\Validation\StrictRules\Rules->is_unique('joven@email.com', 'email_address', Array, NULL, 'email_address')
+#5 C:\xampp\htdocs\teachersportalsystem\system\Validation\Validation.php(182): CodeIgniter\Validation\Validation->processRules('email_address', 'email address', 'joven@email.com', Array, Array)
+#6 C:\xampp\htdocs\teachersportalsystem\system\Controller.php(141): CodeIgniter\Validation\Validation->run()
+#7 C:\xampp\htdocs\teachersportalsystem\app\Controllers\Teacher.php(30): CodeIgniter\Controller->validate(Array)
+#8 C:\xampp\htdocs\teachersportalsystem\system\CodeIgniter.php(932): App\Controllers\Teacher->register()
+#9 C:\xampp\htdocs\teachersportalsystem\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Teacher))
+#10 C:\xampp\htdocs\teachersportalsystem\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\teachersportalsystem\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2023-08-18 03:29:18 --> Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user ''@'localhost' (using password: NO)
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT 1
+FROM `tbl_users`
+WHERE `email_address` = :email_address:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Validation\StrictRules\Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\Validation\Validation.php(278): CodeIgniter\Validation\StrictRules\Rules->is_unique('joven@email.com', 'email_address', [...], null, 'email_address')
+ 5 SYSTEMPATH\Validation\Validation.php(182): CodeIgniter\Validation\Validation->processRules('email_address', 'email address', 'joven@email.com', [...], [...])
+ 6 SYSTEMPATH\Controller.php(141): CodeIgniter\Validation\Validation->run()
+ 7 APPPATH\Controllers\Teacher.php(30): CodeIgniter\Controller->validate([...])
+ 8 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Teacher->register()
+ 9 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Teacher))
+10 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-08-18 03:29:49 --> Error connecting to the database: mysqli_sql_exception: Access denied for user ''@'localhost' (using password: NO) in C:\xampp\htdocs\teachersportalsystem\system\Database\MySQLi\Connection.php:174
+Stack trace:
+#0 C:\xampp\htdocs\teachersportalsystem\system\Database\MySQLi\Connection.php(174): mysqli->real_connect('localhost', '', '', '', 3306, '', 0)
+#1 C:\xampp\htdocs\teachersportalsystem\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\teachersportalsystem\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\teachersportalsystem\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\teachersportalsystem\system\Validation\StrictRules\Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\teachersportalsystem\system\Validation\Validation.php(278): CodeIgniter\Validation\StrictRules\Rules->is_unique('joven@gmail.com', 'email_address', Array, NULL, 'email_address')
+#6 C:\xampp\htdocs\teachersportalsystem\system\Validation\Validation.php(182): CodeIgniter\Validation\Validation->processRules('email_address', 'email address', 'joven@gmail.com', Array, Array)
+#7 C:\xampp\htdocs\teachersportalsystem\system\Controller.php(141): CodeIgniter\Validation\Validation->run()
+#8 C:\xampp\htdocs\teachersportalsystem\app\Controllers\Teacher.php(30): CodeIgniter\Controller->validate(Array)
+#9 C:\xampp\htdocs\teachersportalsystem\system\CodeIgniter.php(932): App\Controllers\Teacher->register()
+#10 C:\xampp\htdocs\teachersportalsystem\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Teacher))
+#11 C:\xampp\htdocs\teachersportalsystem\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\teachersportalsystem\index.php(67): CodeIgniter\CodeIgniter->run()
+#13 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user ''@'localhost' (using password: NO) in C:\xampp\htdocs\teachersportalsystem\system\Database\MySQLi\Connection.php:218
+Stack trace:
+#0 C:\xampp\htdocs\teachersportalsystem\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\teachersportalsystem\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\teachersportalsystem\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#3 C:\xampp\htdocs\teachersportalsystem\system\Validation\StrictRules\Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\teachersportalsystem\system\Validation\Validation.php(278): CodeIgniter\Validation\StrictRules\Rules->is_unique('joven@gmail.com', 'email_address', Array, NULL, 'email_address')
+#5 C:\xampp\htdocs\teachersportalsystem\system\Validation\Validation.php(182): CodeIgniter\Validation\Validation->processRules('email_address', 'email address', 'joven@gmail.com', Array, Array)
+#6 C:\xampp\htdocs\teachersportalsystem\system\Controller.php(141): CodeIgniter\Validation\Validation->run()
+#7 C:\xampp\htdocs\teachersportalsystem\app\Controllers\Teacher.php(30): CodeIgniter\Controller->validate(Array)
+#8 C:\xampp\htdocs\teachersportalsystem\system\CodeIgniter.php(932): App\Controllers\Teacher->register()
+#9 C:\xampp\htdocs\teachersportalsystem\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Teacher))
+#10 C:\xampp\htdocs\teachersportalsystem\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\teachersportalsystem\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2023-08-18 03:29:49 --> Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user ''@'localhost' (using password: NO)
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT 1
+FROM `tbl_users`
+WHERE `email_address` = :email_address:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Validation\StrictRules\Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\Validation\Validation.php(278): CodeIgniter\Validation\StrictRules\Rules->is_unique('joven@gmail.com', 'email_address', [...], null, 'email_address')
+ 5 SYSTEMPATH\Validation\Validation.php(182): CodeIgniter\Validation\Validation->processRules('email_address', 'email address', 'joven@gmail.com', [...], [...])
+ 6 SYSTEMPATH\Controller.php(141): CodeIgniter\Validation\Validation->run()
+ 7 APPPATH\Controllers\Teacher.php(30): CodeIgniter\Controller->validate([...])
+ 8 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Teacher->register()
+ 9 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Teacher))
+10 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-08-18 05:34:02 --> Error connecting to the database: mysqli_sql_exception: Access denied for user ''@'localhost' (using password: NO) in C:\xampp\htdocs\teachersportalsystem\system\Database\MySQLi\Connection.php:174
+Stack trace:
+#0 C:\xampp\htdocs\teachersportalsystem\system\Database\MySQLi\Connection.php(174): mysqli->real_connect('localhost', '', '', '', 3306, '', 0)
+#1 C:\xampp\htdocs\teachersportalsystem\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\teachersportalsystem\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\teachersportalsystem\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\teachersportalsystem\system\Validation\StrictRules\Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\teachersportalsystem\system\Validation\Validation.php(278): CodeIgniter\Validation\StrictRules\Rules->is_unique('joven@email.com', 'email_address', Array, NULL, 'email_address')
+#6 C:\xampp\htdocs\teachersportalsystem\system\Validation\Validation.php(182): CodeIgniter\Validation\Validation->processRules('email_address', 'email address', 'joven@email.com', Array, Array)
+#7 C:\xampp\htdocs\teachersportalsystem\system\Controller.php(141): CodeIgniter\Validation\Validation->run()
+#8 C:\xampp\htdocs\teachersportalsystem\app\Controllers\Teacher.php(30): CodeIgniter\Controller->validate(Array)
+#9 C:\xampp\htdocs\teachersportalsystem\system\CodeIgniter.php(932): App\Controllers\Teacher->register()
+#10 C:\xampp\htdocs\teachersportalsystem\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Teacher))
+#11 C:\xampp\htdocs\teachersportalsystem\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\teachersportalsystem\index.php(67): CodeIgniter\CodeIgniter->run()
+#13 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user ''@'localhost' (using password: NO) in C:\xampp\htdocs\teachersportalsystem\system\Database\MySQLi\Connection.php:218
+Stack trace:
+#0 C:\xampp\htdocs\teachersportalsystem\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\teachersportalsystem\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\teachersportalsystem\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#3 C:\xampp\htdocs\teachersportalsystem\system\Validation\StrictRules\Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\teachersportalsystem\system\Validation\Validation.php(278): CodeIgniter\Validation\StrictRules\Rules->is_unique('joven@email.com', 'email_address', Array, NULL, 'email_address')
+#5 C:\xampp\htdocs\teachersportalsystem\system\Validation\Validation.php(182): CodeIgniter\Validation\Validation->processRules('email_address', 'email address', 'joven@email.com', Array, Array)
+#6 C:\xampp\htdocs\teachersportalsystem\system\Controller.php(141): CodeIgniter\Validation\Validation->run()
+#7 C:\xampp\htdocs\teachersportalsystem\app\Controllers\Teacher.php(30): CodeIgniter\Controller->validate(Array)
+#8 C:\xampp\htdocs\teachersportalsystem\system\CodeIgniter.php(932): App\Controllers\Teacher->register()
+#9 C:\xampp\htdocs\teachersportalsystem\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Teacher))
+#10 C:\xampp\htdocs\teachersportalsystem\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\teachersportalsystem\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2023-08-18 05:34:02 --> Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user ''@'localhost' (using password: NO)
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT 1
+FROM `tbl_users`
+WHERE `email_address` = :email_address:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Validation\StrictRules\Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\Validation\Validation.php(278): CodeIgniter\Validation\StrictRules\Rules->is_unique('joven@email.com', 'email_address', [...], null, 'email_address')
+ 5 SYSTEMPATH\Validation\Validation.php(182): CodeIgniter\Validation\Validation->processRules('email_address', 'email address', 'joven@email.com', [...], [...])
+ 6 SYSTEMPATH\Controller.php(141): CodeIgniter\Validation\Validation->run()
+ 7 APPPATH\Controllers\Teacher.php(30): CodeIgniter\Controller->validate([...])
+ 8 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Teacher->register()
+ 9 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Teacher))
+10 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-08-18 05:35:10 --> Error connecting to the database: mysqli_sql_exception: Unknown database 'teachersportal_db' in C:\xampp\htdocs\teachersportalsystem\system\Database\MySQLi\Connection.php:174
+Stack trace:
+#0 C:\xampp\htdocs\teachersportalsystem\system\Database\MySQLi\Connection.php(174): mysqli->real_connect('localhost', 'root', 'admin', 'teachersportal_...', 3306, '', 0)
+#1 C:\xampp\htdocs\teachersportalsystem\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\teachersportalsystem\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\teachersportalsystem\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\teachersportalsystem\system\Validation\StrictRules\Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\teachersportalsystem\system\Validation\Validation.php(278): CodeIgniter\Validation\StrictRules\Rules->is_unique('joven@email.com', 'email_address', Array, NULL, 'email_address')
+#6 C:\xampp\htdocs\teachersportalsystem\system\Validation\Validation.php(182): CodeIgniter\Validation\Validation->processRules('email_address', 'email address', 'joven@email.com', Array, Array)
+#7 C:\xampp\htdocs\teachersportalsystem\system\Controller.php(141): CodeIgniter\Validation\Validation->run()
+#8 C:\xampp\htdocs\teachersportalsystem\app\Controllers\Teacher.php(30): CodeIgniter\Controller->validate(Array)
+#9 C:\xampp\htdocs\teachersportalsystem\system\CodeIgniter.php(932): App\Controllers\Teacher->register()
+#10 C:\xampp\htdocs\teachersportalsystem\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Teacher))
+#11 C:\xampp\htdocs\teachersportalsystem\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\teachersportalsystem\index.php(67): CodeIgniter\CodeIgniter->run()
+#13 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Unknown database 'teachersportal_db' in C:\xampp\htdocs\teachersportalsystem\system\Database\MySQLi\Connection.php:218
+Stack trace:
+#0 C:\xampp\htdocs\teachersportalsystem\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\teachersportalsystem\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\teachersportalsystem\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#3 C:\xampp\htdocs\teachersportalsystem\system\Validation\StrictRules\Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\teachersportalsystem\system\Validation\Validation.php(278): CodeIgniter\Validation\StrictRules\Rules->is_unique('joven@email.com', 'email_address', Array, NULL, 'email_address')
+#5 C:\xampp\htdocs\teachersportalsystem\system\Validation\Validation.php(182): CodeIgniter\Validation\Validation->processRules('email_address', 'email address', 'joven@email.com', Array, Array)
+#6 C:\xampp\htdocs\teachersportalsystem\system\Controller.php(141): CodeIgniter\Validation\Validation->run()
+#7 C:\xampp\htdocs\teachersportalsystem\app\Controllers\Teacher.php(30): CodeIgniter\Controller->validate(Array)
+#8 C:\xampp\htdocs\teachersportalsystem\system\CodeIgniter.php(932): App\Controllers\Teacher->register()
+#9 C:\xampp\htdocs\teachersportalsystem\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Teacher))
+#10 C:\xampp\htdocs\teachersportalsystem\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\teachersportalsystem\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2023-08-18 05:35:10 --> Unable to connect to the database.
+Main connection [MySQLi]: Unknown database 'teachersportal_db'
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT 1
+FROM `tbl_users`
+WHERE `email_address` = :email_address:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Validation\StrictRules\Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\Validation\Validation.php(278): CodeIgniter\Validation\StrictRules\Rules->is_unique('joven@email.com', 'email_address', [...], null, 'email_address')
+ 5 SYSTEMPATH\Validation\Validation.php(182): CodeIgniter\Validation\Validation->processRules('email_address', 'email address', 'joven@email.com', [...], [...])
+ 6 SYSTEMPATH\Controller.php(141): CodeIgniter\Validation\Validation->run()
+ 7 APPPATH\Controllers\Teacher.php(30): CodeIgniter\Controller->validate([...])
+ 8 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Teacher->register()
+ 9 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Teacher))
+10 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-08-18 05:46:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-08-18 05:47:04 --> CodeIgniter\BaseModel::transformDataToArray(): Return value must be of type array, string returned
+in SYSTEMPATH\BaseModel.php on line 1719.
+ 1 SYSTEMPATH\BaseModel.php(742): CodeIgniter\BaseModel->transformDataToArray('Male', 'insert')
+ 2 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert('Male', true)
+ 3 APPPATH\Controllers\Teacher.php(45): CodeIgniter\Model->insert('Male')
+ 4 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Teacher->register()
+ 5 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Teacher))
+ 6 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-08-18 05:47:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-18 05:48:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-08-18 05:48:59 --> CodeIgniter\BaseModel::transformDataToArray(): Return value must be of type array, string returned
+in SYSTEMPATH\BaseModel.php on line 1719.
+ 1 SYSTEMPATH\BaseModel.php(742): CodeIgniter\BaseModel->transformDataToArray('Male', 'insert')
+ 2 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert('Male', false)
+ 3 APPPATH\Controllers\Teacher.php(45): CodeIgniter\Model->insert('Male', false)
+ 4 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Teacher->register()
+ 5 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Teacher))
+ 6 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-08-18 05:49:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-18 05:51:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-08-18 05:51:33 --> CodeIgniter\BaseModel::transformDataToArray(): Return value must be of type array, string returned
+in SYSTEMPATH\BaseModel.php on line 1719.
+ 1 SYSTEMPATH\BaseModel.php(742): CodeIgniter\BaseModel->transformDataToArray('Male', 'insert')
+ 2 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert('Male', true)
+ 3 APPPATH\Controllers\Teacher.php(45): CodeIgniter\Model->insert('Male')
+ 4 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Teacher->register()
+ 5 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Teacher))
+ 6 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-08-18 05:54:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-08-18 05:54:59 --> CodeIgniter\BaseModel::transformDataToArray(): Return value must be of type array, string returned
+in SYSTEMPATH\BaseModel.php on line 1719.
+ 1 SYSTEMPATH\BaseModel.php(742): CodeIgniter\BaseModel->transformDataToArray('Male', 'insert')
+ 2 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert('Male', false)
+ 3 SYSTEMPATH\BaseModel.php(692): CodeIgniter\Model->insert('Male', false)
+ 4 APPPATH\Controllers\Teacher.php(45): CodeIgniter\BaseModel->save('Male')
+ 5 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Teacher->register()
+ 6 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Teacher))
+ 7 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-08-18 05:55:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-18 05:55:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-08-18 05:55:27 --> CodeIgniter\BaseModel::transformDataToArray(): Return value must be of type array, string returned
+in SYSTEMPATH\BaseModel.php on line 1719.
+ 1 SYSTEMPATH\BaseModel.php(742): CodeIgniter\BaseModel->transformDataToArray('Male', 'insert')
+ 2 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert('Male', false)
+ 3 SYSTEMPATH\BaseModel.php(692): CodeIgniter\Model->insert('Male', false)
+ 4 APPPATH\Controllers\Teacher.php(45): CodeIgniter\BaseModel->save('Male')
+ 5 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Teacher->register()
+ 6 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Teacher))
+ 7 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-08-18 05:55:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-08-18 05:56:28 --> CodeIgniter\BaseModel::transformDataToArray(): Return value must be of type array, string returned
+in SYSTEMPATH\BaseModel.php on line 1719.
+ 1 SYSTEMPATH\BaseModel.php(742): CodeIgniter\BaseModel->transformDataToArray('Male', 'insert')
+ 2 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert('Male', false)
+ 3 SYSTEMPATH\BaseModel.php(692): CodeIgniter\Model->insert('Male', false)
+ 4 APPPATH\Controllers\Teacher.php(45): CodeIgniter\BaseModel->save('Male')
+ 5 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Teacher->register()
+ 6 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Teacher))
+ 7 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-08-18 05:56:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-18 05:56:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-08-18 05:56:48 --> CodeIgniter\BaseModel::transformDataToArray(): Return value must be of type array, string returned
+in SYSTEMPATH\BaseModel.php on line 1719.
+ 1 SYSTEMPATH\BaseModel.php(742): CodeIgniter\BaseModel->transformDataToArray('Male', 'insert')
+ 2 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert('Male', false)
+ 3 SYSTEMPATH\BaseModel.php(692): CodeIgniter\Model->insert('Male', false)
+ 4 APPPATH\Controllers\Teacher.php(45): CodeIgniter\BaseModel->save('Male')
+ 5 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Teacher->register()
+ 6 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Teacher))
+ 7 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-08-18 05:59:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-18 05:59:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-08-18 05:59:50 --> CodeIgniter\BaseModel::transformDataToArray(): Return value must be of type array, string returned
+in SYSTEMPATH\BaseModel.php on line 1719.
+ 1 SYSTEMPATH\BaseModel.php(742): CodeIgniter\BaseModel->transformDataToArray('Male', 'insert')
+ 2 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert('Male', true)
+ 3 APPPATH\Controllers\Teacher.php(45): CodeIgniter\Model->insert('Male')
+ 4 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Teacher->register()
+ 5 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Teacher))
+ 6 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-08-18 06:01:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-08-18 06:01:46 --> CodeIgniter\BaseModel::transformDataToArray(): Return value must be of type array, string returned
+in SYSTEMPATH\BaseModel.php on line 1719.
+ 1 SYSTEMPATH\BaseModel.php(742): CodeIgniter\BaseModel->transformDataToArray('Male', 'insert')
+ 2 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert('Male', true)
+ 3 APPPATH\Controllers\Teacher.php(45): CodeIgniter\Model->insert('Male')
+ 4 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Teacher->register()
+ 5 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Teacher))
+ 6 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-08-18 06:01:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-08-18 06:03:14 --> CodeIgniter\BaseModel::transformDataToArray(): Return value must be of type array, string returned
+in SYSTEMPATH\BaseModel.php on line 1719.
+ 1 SYSTEMPATH\BaseModel.php(742): CodeIgniter\BaseModel->transformDataToArray('Male', 'insert')
+ 2 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert('Male', true)
+ 3 APPPATH\Controllers\Teacher.php(45): CodeIgniter\Model->insert('Male')
+ 4 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Teacher->register()
+ 5 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Teacher))
+ 6 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-08-18 06:03:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-08-18 06:07:46 --> CodeIgniter\BaseModel::transformDataToArray(): Return value must be of type array, string returned
+in SYSTEMPATH\BaseModel.php on line 1719.
+ 1 SYSTEMPATH\BaseModel.php(742): CodeIgniter\BaseModel->transformDataToArray('Male', 'insert')
+ 2 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert('Male', true)
+ 3 APPPATH\Controllers\Teacher.php(45): CodeIgniter\Model->insert('Male')
+ 4 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Teacher->register()
+ 5 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Teacher))
+ 6 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-08-18 06:09:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-08-18 06:09:28 --> CodeIgniter\BaseModel::transformDataToArray(): Return value must be of type array, string returned
+in SYSTEMPATH\BaseModel.php on line 1719.
+ 1 SYSTEMPATH\BaseModel.php(742): CodeIgniter\BaseModel->transformDataToArray('Male', 'insert')
+ 2 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert('Male', false)
+ 3 SYSTEMPATH\BaseModel.php(692): CodeIgniter\Model->insert('Male', false)
+ 4 APPPATH\Controllers\Teacher.php(45): CodeIgniter\BaseModel->save('Male')
+ 5 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Teacher->register()
+ 6 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Teacher))
+ 7 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-08-18 06:12:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-08-18 06:12:09 --> There is no data to insert.
+in SYSTEMPATH\BaseModel.php on line 762.
+ 1 SYSTEMPATH\BaseModel.php(762): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('insert')
+ 2 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([], true)
+ 3 APPPATH\Controllers\Teacher.php(45): CodeIgniter\Model->insert([...])
+ 4 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Teacher->register()
+ 5 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Teacher))
+ 6 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-08-18 06:13:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-18 06:14:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-18 06:14:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-08-18 06:16:35 --> There is no data to insert.
+in SYSTEMPATH\BaseModel.php on line 762.
+ 1 SYSTEMPATH\BaseModel.php(762): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('insert')
+ 2 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([], false)
+ 3 SYSTEMPATH\BaseModel.php(692): CodeIgniter\Model->insert([...], false)
+ 4 APPPATH\Controllers\Teacher.php(45): CodeIgniter\BaseModel->save([...])
+ 5 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Teacher->register()
+ 6 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Teacher))
+ 7 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-08-18 06:16:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-18 06:16:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-18 06:16:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-08-18 06:17:02 --> There is no data to insert.
+in SYSTEMPATH\BaseModel.php on line 762.
+ 1 SYSTEMPATH\BaseModel.php(762): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('insert')
+ 2 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([], false)
+ 3 SYSTEMPATH\BaseModel.php(692): CodeIgniter\Model->insert([...], false)
+ 4 APPPATH\Controllers\Teacher.php(45): CodeIgniter\BaseModel->save([...])
+ 5 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Teacher->register()
+ 6 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Teacher))
+ 7 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-08-18 06:17:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-08-18 06:19:44 --> CodeIgniter\BaseModel::transformDataToArray(): Return value must be of type array, string returned
+in SYSTEMPATH\BaseModel.php on line 1719.
+ 1 SYSTEMPATH\BaseModel.php(742): CodeIgniter\BaseModel->transformDataToArray('Male', 'insert')
+ 2 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert('Male', true)
+ 3 APPPATH\Controllers\Teacher.php(45): CodeIgniter\Model->insert('Male')
+ 4 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Teacher->register()
+ 5 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Teacher))
+ 6 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-08-18 06:19:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-08-18 06:20:10 --> There is no data to insert.
+in SYSTEMPATH\BaseModel.php on line 762.
+ 1 SYSTEMPATH\BaseModel.php(762): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('insert')
+ 2 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([], true)
+ 3 APPPATH\Controllers\Teacher.php(45): CodeIgniter\Model->insert([...])
+ 4 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Teacher->register()
+ 5 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Teacher))
+ 6 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-08-18 06:28:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-18 06:28:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-18 06:29:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-18 06:32:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-08-18 06:32:31 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`teachersportal_db`.`tbl_users`, CONSTRAINT `tbl_users_ibfk_1` FOREIGN KEY (`gender_id`) REFERENCES `tbl_genders` (`gender_id`)) in C:\xampp\htdocs\teachersportalsystem\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\teachersportalsystem\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `tb...', 0)
+#1 C:\xampp\htdocs\teachersportalsystem\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tb...')
+#2 C:\xampp\htdocs\teachersportalsystem\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tb...')
+#3 C:\xampp\htdocs\teachersportalsystem\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tb...', Array, false)
+#4 C:\xampp\htdocs\teachersportalsystem\system\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\teachersportalsystem\system\BaseModel.php(782): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\teachersportalsystem\system\Model.php(730): CodeIgniter\BaseModel->insert(Array, false)
+#7 C:\xampp\htdocs\teachersportalsystem\system\BaseModel.php(692): CodeIgniter\Model->insert(Array, false)
+#8 C:\xampp\htdocs\teachersportalsystem\app\Controllers\Teacher.php(63): CodeIgniter\BaseModel->save(Array)
+#9 C:\xampp\htdocs\teachersportalsystem\system\CodeIgniter.php(932): App\Controllers\Teacher->register()
+#10 C:\xampp\htdocs\teachersportalsystem\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Teacher))
+#11 C:\xampp\htdocs\teachersportalsystem\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\teachersportalsystem\index.php(67): CodeIgniter\CodeIgniter->run()
+#13 {main}
+CRITICAL - 2023-08-18 06:32:31 --> Cannot add or update a child row: a foreign key constraint fails (`teachersportal_db`.`tbl_users`, CONSTRAINT `tbl_users_ibfk_1` FOREIGN KEY (`gender_id`) REFERENCES `tbl_genders` (`gender_id`))
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `tbl_users` (`first_name`, `middle_name`, `last_name`, `age`, `address`, `contact_number`, `email_address`, `password`) VALUES (\'Joven Joshua C. Alovera\', \'Celiz\', \'Alovera\', \'23\', \'1696 San Roque St. Inzo Arnaldo Village Roxas City Capiz\', \'+639434071429\', \'jovenalovera1999@gmail.com\', \'123\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tbl_users` (`first_name`, `middle_name`, `last_name`, `age`, `address`, `contact_number`, `email_address`, `password`) VALUES (\'Joven Joshua C. Alovera\', \'Celiz\', \'Alovera\', \'23\', \'1696 San Roque St. Inzo Arnaldo Village Roxas City Capiz\', \'+639434071429\', \'jovenalovera1999@gmail.com\', \'123\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tbl_users` (`first_name`, `middle_name`, `last_name`, `age`, `address`, `contact_number`, `email_address`, `password`) VALUES (\'Joven Joshua C. Alovera\', \'Celiz\', \'Alovera\', \'23\', \'1696 San Roque St. Inzo Arnaldo Village Roxas City Capiz\', \'+639434071429\', \'jovenalovera1999@gmail.com\', \'123\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tbl_users` (`first_name`, `middle_name`, `last_name`, `age`, `address`, `contact_number`, `email_address`, `password`) VALUES (:first_name:, :middle_name:, :last_name:, :age:, :address:, :contact_number:, :email_address:, :password:)', [...], false)
+ 5 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(782): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([...], false)
+ 8 SYSTEMPATH\BaseModel.php(692): CodeIgniter\Model->insert([...], false)
+ 9 APPPATH\Controllers\Teacher.php(63): CodeIgniter\BaseModel->save([...])
+10 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Teacher->register()
+11 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Teacher))
+12 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-08-18 06:36:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-08-18 06:36:18 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`teachersportal_db`.`tbl_users`, CONSTRAINT `tbl_users_ibfk_1` FOREIGN KEY (`gender_id`) REFERENCES `tbl_genders` (`gender_id`) ON DELETE CASCADE ON UPDATE CASCADE) in C:\xampp\htdocs\teachersportalsystem\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\teachersportalsystem\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `tb...', 0)
+#1 C:\xampp\htdocs\teachersportalsystem\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tb...')
+#2 C:\xampp\htdocs\teachersportalsystem\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tb...')
+#3 C:\xampp\htdocs\teachersportalsystem\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tb...', Array, false)
+#4 C:\xampp\htdocs\teachersportalsystem\system\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\teachersportalsystem\system\BaseModel.php(782): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\teachersportalsystem\system\Model.php(730): CodeIgniter\BaseModel->insert(Array, false)
+#7 C:\xampp\htdocs\teachersportalsystem\system\BaseModel.php(692): CodeIgniter\Model->insert(Array, false)
+#8 C:\xampp\htdocs\teachersportalsystem\app\Controllers\Teacher.php(63): CodeIgniter\BaseModel->save(Array)
+#9 C:\xampp\htdocs\teachersportalsystem\system\CodeIgniter.php(932): App\Controllers\Teacher->register()
+#10 C:\xampp\htdocs\teachersportalsystem\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Teacher))
+#11 C:\xampp\htdocs\teachersportalsystem\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\teachersportalsystem\index.php(67): CodeIgniter\CodeIgniter->run()
+#13 {main}
+CRITICAL - 2023-08-18 06:36:18 --> Cannot add or update a child row: a foreign key constraint fails (`teachersportal_db`.`tbl_users`, CONSTRAINT `tbl_users_ibfk_1` FOREIGN KEY (`gender_id`) REFERENCES `tbl_genders` (`gender_id`) ON DELETE CASCADE ON UPDATE CASCADE)
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `tbl_users` (`first_name`, `middle_name`, `last_name`, `age`, `address`, `contact_number`, `email_address`, `password`) VALUES (\'Joven Joshua C. Alovera\', \'Celiz\', \'Alovera\', \'23\', \'1696 San Roque St. Inzo Arnaldo Village Roxas City Capiz\', \'+639434071429\', \'jovenalovera1999@gmail.com\', \'123\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tbl_users` (`first_name`, `middle_name`, `last_name`, `age`, `address`, `contact_number`, `email_address`, `password`) VALUES (\'Joven Joshua C. Alovera\', \'Celiz\', \'Alovera\', \'23\', \'1696 San Roque St. Inzo Arnaldo Village Roxas City Capiz\', \'+639434071429\', \'jovenalovera1999@gmail.com\', \'123\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tbl_users` (`first_name`, `middle_name`, `last_name`, `age`, `address`, `contact_number`, `email_address`, `password`) VALUES (\'Joven Joshua C. Alovera\', \'Celiz\', \'Alovera\', \'23\', \'1696 San Roque St. Inzo Arnaldo Village Roxas City Capiz\', \'+639434071429\', \'jovenalovera1999@gmail.com\', \'123\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tbl_users` (`first_name`, `middle_name`, `last_name`, `age`, `address`, `contact_number`, `email_address`, `password`) VALUES (:first_name:, :middle_name:, :last_name:, :age:, :address:, :contact_number:, :email_address:, :password:)', [...], false)
+ 5 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(782): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([...], false)
+ 8 SYSTEMPATH\BaseModel.php(692): CodeIgniter\Model->insert([...], false)
+ 9 APPPATH\Controllers\Teacher.php(63): CodeIgniter\BaseModel->save([...])
+10 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Teacher->register()
+11 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Teacher))
+12 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-08-18 06:41:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-08-18 06:41:27 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`teachersportal_db`.`tbl_users`, CONSTRAINT `tbl_users_ibfk_1` FOREIGN KEY (`gender_id`) REFERENCES `tbl_genders` (`gender_id`) ON DELETE CASCADE ON UPDATE CASCADE) in C:\xampp\htdocs\teachersportalsystem\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\teachersportalsystem\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `tb...', 0)
+#1 C:\xampp\htdocs\teachersportalsystem\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tb...')
+#2 C:\xampp\htdocs\teachersportalsystem\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tb...')
+#3 C:\xampp\htdocs\teachersportalsystem\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tb...', Array, false)
+#4 C:\xampp\htdocs\teachersportalsystem\system\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\teachersportalsystem\system\BaseModel.php(782): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\teachersportalsystem\system\Model.php(730): CodeIgniter\BaseModel->insert(Array, false)
+#7 C:\xampp\htdocs\teachersportalsystem\system\BaseModel.php(692): CodeIgniter\Model->insert(Array, false)
+#8 C:\xampp\htdocs\teachersportalsystem\app\Controllers\Teacher.php(63): CodeIgniter\BaseModel->save(Array)
+#9 C:\xampp\htdocs\teachersportalsystem\system\CodeIgniter.php(932): App\Controllers\Teacher->register()
+#10 C:\xampp\htdocs\teachersportalsystem\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Teacher))
+#11 C:\xampp\htdocs\teachersportalsystem\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\teachersportalsystem\index.php(67): CodeIgniter\CodeIgniter->run()
+#13 {main}
+CRITICAL - 2023-08-18 06:41:27 --> Cannot add or update a child row: a foreign key constraint fails (`teachersportal_db`.`tbl_users`, CONSTRAINT `tbl_users_ibfk_1` FOREIGN KEY (`gender_id`) REFERENCES `tbl_genders` (`gender_id`) ON DELETE CASCADE ON UPDATE CASCADE)
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `tbl_users` (`first_name`, `middle_name`, `last_name`, `age`, `address`, `contact_number`, `email_address`, `password`) VALUES (\'Joven Joshua C. Alovera\', \'Celiz\', \'Alovera\', \'23\', \'1696 San Roque St. Inzo Arnaldo Village Roxas City Capiz\', \'+639434071429\', \'jovenalovera1999@gmail.com\', \'123\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tbl_users` (`first_name`, `middle_name`, `last_name`, `age`, `address`, `contact_number`, `email_address`, `password`) VALUES (\'Joven Joshua C. Alovera\', \'Celiz\', \'Alovera\', \'23\', \'1696 San Roque St. Inzo Arnaldo Village Roxas City Capiz\', \'+639434071429\', \'jovenalovera1999@gmail.com\', \'123\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tbl_users` (`first_name`, `middle_name`, `last_name`, `age`, `address`, `contact_number`, `email_address`, `password`) VALUES (\'Joven Joshua C. Alovera\', \'Celiz\', \'Alovera\', \'23\', \'1696 San Roque St. Inzo Arnaldo Village Roxas City Capiz\', \'+639434071429\', \'jovenalovera1999@gmail.com\', \'123\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tbl_users` (`first_name`, `middle_name`, `last_name`, `age`, `address`, `contact_number`, `email_address`, `password`) VALUES (:first_name:, :middle_name:, :last_name:, :age:, :address:, :contact_number:, :email_address:, :password:)', [...], false)
+ 5 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(782): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([...], false)
+ 8 SYSTEMPATH\BaseModel.php(692): CodeIgniter\Model->insert([...], false)
+ 9 APPPATH\Controllers\Teacher.php(63): CodeIgniter\BaseModel->save([...])
+10 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Teacher->register()
+11 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Teacher))
+12 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-08-18 15:31:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-08-18 15:31:38 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`teachersportal_db`.`tbl_users`, CONSTRAINT `tbl_users_ibfk_1` FOREIGN KEY (`gender_id`) REFERENCES `tbl_genders` (`gender_id`) ON DELETE CASCADE ON UPDATE CASCADE) in C:\xampp\htdocs\teachersportalsystem\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\teachersportalsystem\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `tb...', 0)
+#1 C:\xampp\htdocs\teachersportalsystem\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tb...')
+#2 C:\xampp\htdocs\teachersportalsystem\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tb...')
+#3 C:\xampp\htdocs\teachersportalsystem\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tb...', Array, false)
+#4 C:\xampp\htdocs\teachersportalsystem\system\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\teachersportalsystem\system\BaseModel.php(782): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\teachersportalsystem\system\Model.php(730): CodeIgniter\BaseModel->insert(Array, false)
+#7 C:\xampp\htdocs\teachersportalsystem\system\BaseModel.php(692): CodeIgniter\Model->insert(Array, false)
+#8 C:\xampp\htdocs\teachersportalsystem\app\Controllers\Teacher.php(63): CodeIgniter\BaseModel->save(Array)
+#9 C:\xampp\htdocs\teachersportalsystem\system\CodeIgniter.php(932): App\Controllers\Teacher->register()
+#10 C:\xampp\htdocs\teachersportalsystem\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Teacher))
+#11 C:\xampp\htdocs\teachersportalsystem\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\teachersportalsystem\index.php(67): CodeIgniter\CodeIgniter->run()
+#13 {main}
+CRITICAL - 2023-08-18 15:31:38 --> Cannot add or update a child row: a foreign key constraint fails (`teachersportal_db`.`tbl_users`, CONSTRAINT `tbl_users_ibfk_1` FOREIGN KEY (`gender_id`) REFERENCES `tbl_genders` (`gender_id`) ON DELETE CASCADE ON UPDATE CASCADE)
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `tbl_users` (`first_name`, `middle_name`, `last_name`, `age`, `address`, `contact_number`, `email_address`, `password`) VALUES (\'Joven Joshua\', \'Celiz\', \'Alovera\', \'23\', \'1696 San Roque St. Inzo Arnaldo Village Roxas City Capiz\', \'+639434071429\', \'jovenalovera1999@gmail.com\', \'123\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tbl_users` (`first_name`, `middle_name`, `last_name`, `age`, `address`, `contact_number`, `email_address`, `password`) VALUES (\'Joven Joshua\', \'Celiz\', \'Alovera\', \'23\', \'1696 San Roque St. Inzo Arnaldo Village Roxas City Capiz\', \'+639434071429\', \'jovenalovera1999@gmail.com\', \'123\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tbl_users` (`first_name`, `middle_name`, `last_name`, `age`, `address`, `contact_number`, `email_address`, `password`) VALUES (\'Joven Joshua\', \'Celiz\', \'Alovera\', \'23\', \'1696 San Roque St. Inzo Arnaldo Village Roxas City Capiz\', \'+639434071429\', \'jovenalovera1999@gmail.com\', \'123\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tbl_users` (`first_name`, `middle_name`, `last_name`, `age`, `address`, `contact_number`, `email_address`, `password`) VALUES (:first_name:, :middle_name:, :last_name:, :age:, :address:, :contact_number:, :email_address:, :password:)', [...], false)
+ 5 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(782): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([...], false)
+ 8 SYSTEMPATH\BaseModel.php(692): CodeIgniter\Model->insert([...], false)
+ 9 APPPATH\Controllers\Teacher.php(63): CodeIgniter\BaseModel->save([...])
+10 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Teacher->register()
+11 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Teacher))
+12 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-08-18 15:46:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-08-18 15:46:38 --> Undefined variable $gender
+in APPPATH\Controllers\Teacher.php on line 41.
+ 1 APPPATH\Controllers\Teacher.php(41): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $gender', 'C:\\xampp\\htdocs\\teachersportalsystem\\app\\Controllers\\Teacher.php', 41)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Teacher->register()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Teacher))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-08-18 15:47:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-08-18 15:47:28 --> Undefined variable $gender_id
+in APPPATH\Controllers\Teacher.php on line 41.
+ 1 APPPATH\Controllers\Teacher.php(41): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $gender_id', 'C:\\xampp\\htdocs\\teachersportalsystem\\app\\Controllers\\Teacher.php', 41)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Teacher->register()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Teacher))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-08-18 15:47:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-08-18 15:47:52 --> Attempt to read property "gender_id" on array
+in APPPATH\Controllers\Teacher.php on line 41.
+ 1 APPPATH\Controllers\Teacher.php(41): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "gender_id" on array', 'C:\\xampp\\htdocs\\teachersportalsystem\\app\\Controllers\\Teacher.php', 41)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Teacher->register()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Teacher))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-08-18 15:49:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-08-18 15:49:28 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`teachersportal_db`.`tbl_users`, CONSTRAINT `tbl_users_ibfk_1` FOREIGN KEY (`gender_id`) REFERENCES `tbl_genders` (`gender_id`) ON DELETE CASCADE ON UPDATE CASCADE) in C:\xampp\htdocs\teachersportalsystem\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\teachersportalsystem\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `tb...', 0)
+#1 C:\xampp\htdocs\teachersportalsystem\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tb...')
+#2 C:\xampp\htdocs\teachersportalsystem\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tb...')
+#3 C:\xampp\htdocs\teachersportalsystem\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tb...', Array, false)
+#4 C:\xampp\htdocs\teachersportalsystem\system\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\teachersportalsystem\system\BaseModel.php(782): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\teachersportalsystem\system\Model.php(730): CodeIgniter\BaseModel->insert(Array, false)
+#7 C:\xampp\htdocs\teachersportalsystem\system\BaseModel.php(692): CodeIgniter\Model->insert(Array, false)
+#8 C:\xampp\htdocs\teachersportalsystem\app\Controllers\Teacher.php(63): CodeIgniter\BaseModel->save(Array)
+#9 C:\xampp\htdocs\teachersportalsystem\system\CodeIgniter.php(932): App\Controllers\Teacher->register()
+#10 C:\xampp\htdocs\teachersportalsystem\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Teacher))
+#11 C:\xampp\htdocs\teachersportalsystem\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\teachersportalsystem\index.php(67): CodeIgniter\CodeIgniter->run()
+#13 {main}
+CRITICAL - 2023-08-18 15:49:28 --> Cannot add or update a child row: a foreign key constraint fails (`teachersportal_db`.`tbl_users`, CONSTRAINT `tbl_users_ibfk_1` FOREIGN KEY (`gender_id`) REFERENCES `tbl_genders` (`gender_id`) ON DELETE CASCADE ON UPDATE CASCADE)
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `tbl_users` (`first_name`, `middle_name`, `last_name`, `age`, `address`, `contact_number`, `email_address`, `password`) VALUES (\'Joven Joshua\', \'Celiz\', \'Alovera\', \'23\', \'1696 San Roque St. Inzo Arnaldo Village Roxas City Capiz\', \'+639434071429\', \'jovenalovera1999@gmail.com\', \'123\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tbl_users` (`first_name`, `middle_name`, `last_name`, `age`, `address`, `contact_number`, `email_address`, `password`) VALUES (\'Joven Joshua\', \'Celiz\', \'Alovera\', \'23\', \'1696 San Roque St. Inzo Arnaldo Village Roxas City Capiz\', \'+639434071429\', \'jovenalovera1999@gmail.com\', \'123\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tbl_users` (`first_name`, `middle_name`, `last_name`, `age`, `address`, `contact_number`, `email_address`, `password`) VALUES (\'Joven Joshua\', \'Celiz\', \'Alovera\', \'23\', \'1696 San Roque St. Inzo Arnaldo Village Roxas City Capiz\', \'+639434071429\', \'jovenalovera1999@gmail.com\', \'123\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tbl_users` (`first_name`, `middle_name`, `last_name`, `age`, `address`, `contact_number`, `email_address`, `password`) VALUES (:first_name:, :middle_name:, :last_name:, :age:, :address:, :contact_number:, :email_address:, :password:)', [...], false)
+ 5 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(782): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([...], false)
+ 8 SYSTEMPATH\BaseModel.php(692): CodeIgniter\Model->insert([...], false)
+ 9 APPPATH\Controllers\Teacher.php(63): CodeIgniter\BaseModel->save([...])
+10 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Teacher->register()
+11 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Teacher))
+12 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-08-18 16:01:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-08-18 16:01:29 --> There is no data to insert.
+in SYSTEMPATH\BaseModel.php on line 762.
+ 1 SYSTEMPATH\BaseModel.php(762): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('insert')
+ 2 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([], true)
+ 3 APPPATH\Controllers\Teacher.php(46): CodeIgniter\Model->insert([...])
+ 4 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Teacher->register()
+ 5 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Teacher))
+ 6 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-08-18 16:04:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-18 16:05:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-08-18 16:05:01 --> CodeIgniter\HTTP\RedirectResponse::to(): Argument #2 ($code) must be of type ?int, array given, called in C:\xampp\htdocs\teachersportalsystem\app\Controllers\Teacher.php on line 81
+in SYSTEMPATH\HTTP\RedirectResponse.php on line 32.
+ 1 APPPATH\Controllers\Teacher.php(81): CodeIgniter\HTTP\RedirectResponse->to('dean/register', [])
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Teacher->register()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Teacher))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-08-18 16:06:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-18 16:06:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-18 16:08:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-18 16:09:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-18 16:10:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-18 16:10:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-18 16:11:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-18 16:19:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-18 16:21:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-18 16:21:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-18 16:22:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-18 16:22:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-18 16:24:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-18 16:24:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-18 16:26:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-18 16:26:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-18 16:27:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-18 16:28:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-18 16:28:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-08-18 16:33:44 --> Call to undefined method App\Models\UserModel::order_by
+in SYSTEMPATH\Model.php on line 838.
+ 1 APPPATH\Controllers\Teacher.php(10): CodeIgniter\Model->__call('order_by', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Teacher->index()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Teacher))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-18 16:38:59 --> Invalid file: "teacher/register.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(212): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('teacher/register.php')
+ 2 SYSTEMPATH\Common.php(1176): CodeIgniter\View\View->render('teacher/register', [], true)
+ 3 APPPATH\Controllers\Teacher.php(91): view('teacher/register', [])
+ 4 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Teacher->register()
+ 5 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Teacher))
+ 6 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-18 16:39:15 --> Invalid file: "teacher/register.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(212): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('teacher/register.php')
+ 2 SYSTEMPATH\Common.php(1176): CodeIgniter\View\View->render('teacher/register', [], true)
+ 3 APPPATH\Controllers\Teacher.php(91): view('teacher/register', [])
+ 4 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Teacher->register()
+ 5 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Teacher))
+ 6 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-18 16:40:07 --> Invalid file: "teachers/register.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(212): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('teachers/register.php')
+ 2 SYSTEMPATH\Common.php(1176): CodeIgniter\View\View->render('teachers/register', [], true)
+ 3 APPPATH\Controllers\Teacher.php(91): view('teachers/register', [])
+ 4 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Teacher->register()
+ 5 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Teacher))
+ 6 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-08-18 16:40:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-08-18 16:59:21 --> Undefined variable $users
+in APPPATH\Views\teacher\list.php on line 55.
+ 1 APPPATH\Views\teacher\list.php(55): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $users', 'C:\\xampp\\htdocs\\teachersportalsystem\\app\\Views\\teacher\\list.php', 55)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\teachersportalsystem\\app\\Views\\teacher\\list.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1176): CodeIgniter\View\View->render('teacher/list', [], true)
+ 5 APPPATH\Controllers\Teacher.php(11): view('teacher/list')
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Teacher->list()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Teacher))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-18 17:00:02 --> Undefined property: stdClass::$gender
+in APPPATH\Views\teacher\list.php on line 60.
+ 1 APPPATH\Views\teacher\list.php(60): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$gender', 'C:\\xampp\\htdocs\\teachersportalsystem\\app\\Views\\teacher\\list.php', 60)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\teachersportalsystem\\app\\Views\\teacher\\list.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1176): CodeIgniter\View\View->render('teacher/list', [], true)
+ 5 APPPATH\Controllers\Teacher.php(11): view('teacher/list', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Teacher->list()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Teacher))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-08-18 17:50:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-18 17:50:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-18 17:51:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-18 17:51:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-18 17:52:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-18 17:52:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
