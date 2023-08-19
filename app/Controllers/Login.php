@@ -6,6 +6,8 @@ class Login extends BaseController
 {
     public function login() 
     {
+        
+
         return view('index');
     }
 }

@@ -33,9 +33,9 @@
         <div id="content" class="p-4 p-md-5 pt-5">
             <div class="container">
                 <div class="card-body w-75 mx-auto">
-                    <h3 class="card-title">Teacher's Information</h3>
+                    <h3 class="card-title">Are you sure you want to delete this teacher?</h3>
                     <!-- Form login -->
-                    <form class="mt-5" action="#">
+                    <form class="mt-5" action="<?=base_url()?>teacher/delete/<?=$user->user_id?>" method="post">
                         <div class="row">
                             <div class="col">
                                 <div class="mb-3">
@@ -82,6 +82,7 @@
                                 </div>
                             </div>
                         </div>
+                        <button type="submit" class="btn btn-danger w-100">Delete</button>
                         <a href="<?=base_url()?>teacher/list" class=" btn w-100 mt-3" id="custom-button-color">Back</a>
                     </form>
                 </div>

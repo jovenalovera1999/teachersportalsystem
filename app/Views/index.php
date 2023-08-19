@@ -1,8 +1,8 @@
 <!-- Master Page -->
-<?= $this->extend('layout/main') ?>
+<?=$this->extend('layout/main')?>
 
 <!-- Content -->
-<?= $this->section('content') ?>
+<?=$this->section('content')?>
 
 <title>Teacher's Portal | User Authentication</title>
 

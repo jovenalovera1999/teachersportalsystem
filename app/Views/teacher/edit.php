@@ -40,7 +40,7 @@
                                 <svg width="1.25em" height="1.25em" class="bi bi-exclamation-circle-fill" fill="currentColor">
                                     <path fill-rule="evenodd" d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8 4a.905.905 0 0 0-.9.995l.35 3.507a.552.552 0 0 0 1.1 0l.35-3.507A.905.905 0 0 0 8 4zm.002 6a1 1 0 1 0 0 2 1 1 0 0 0 0-2z" />
                                 </svg>
-                                <strong class="me-auto">Failed to register!</strong>
+                                <strong class="me-auto">Failed to save!</strong>
                                 <?= $validation->listErrors(); ?>
                             </div>
                         </div>
@@ -49,22 +49,22 @@
             <?php endif; ?>
             <div class="container">
                 <div class="card-body w-75 mx-auto">
-                    <h3 class="card-title">Register a Teacher</h3>
+                    <h3 class="card-title">Edit Teacher Information</h3>
                     <!-- Form login -->
-                    <form class="mt-5" action="<?=base_url()?>teacher/register" method="post">
+                    <form class="mt-5" action="<?=base_url()?>teacher/edit/<?=$user->user_id?>" method="post">
                         <div class="row">
                             <div class="col">
                                 <div class="mb-3">
                                     <label for="first_name" class="form-label">First Name</label>
-                                    <input type="text" class="form-control" id="first_name" name="first_name" value="<?=set_value('first_name')?>">
+                                    <input type="text" class="form-control" id="first_name" name="first_name" value="<?=set_value('first_name', $user->first_name)?>">
                                 </div>
                                 <div class="mb-3">
                                     <label for="middle_name" class="form-label">Middle Name</label>
-                                    <input type="text" class="form-control" id="middle_name" name="middle_name" value="<?=set_value('middle_name')?>">
+                                    <input type="text" class="form-control" id="middle_name" name="middle_name" value="<?=set_value('middle_name', $user->middle_name)?>">
                                 </div>
                                 <div class="mb-3">
                                     <label for="last_name" class="form-label">Last Name</label>
-                                    <input type="text" class="form-control" id="last_name" name="last_name" value="<?=set_value('last_name')?>">
+                                    <input type="text" class="form-control" id="last_name" name="last_name" value="<?=set_value('last_name', $user->last_name)?>">
                                 </div>
                                 <div class="mb-3">
                                     <label for="gender" class="form-label">Gender</label>
@@ -73,30 +73,30 @@
                                         <option value="Male">Male</option>
                                         <option value="Female">Female</option>
                                         <option value="Others">Others</option>
-                                        <option value="<?=set_value('gender')?>" selected hidden><?=set_value('gender')?></option>
+                                        <option value="<?=set_value('gender', $user->gender)?>" selected hidden><?=set_value('gender', $user->gender)?></option>
                                     </select>
                                 </div>
                                 <div class="mb-3">
                                     <label for="age" class="form-label">Age</label>
-                                    <input type="text" class="form-control" id="age" name="age" value="<?=set_value('age')?>">
+                                    <input type="text" class="form-control" id="age" name="age" value="<?=set_value('age', $user->age)?>">
                                 </div>
                             </div>
                             <div class="col">
                                 <div class="mb-3">
                                     <label for="address" class="form-label">Address</label>
-                                    <input type="text" class="form-control" id="address" name="address" value="<?=set_value('address')?>">
+                                    <input type="text" class="form-control" id="address" name="address" value="<?=set_value('address', $user->address)?>">
                                 </div>
                                 <div class="mb-3">
                                     <label for="contact_number" class="form-label">Contact Number</label>
-                                    <input type="text" class="form-control" id="contact_number" name="contact_number" value="<?=set_value('contact_number')?>">
+                                    <input type="text" class="form-control" id="contact_number" name="contact_number" value="<?=set_value('contact_number', $user->contact_number)?>">
                                 </div>
                                 <div class="mb-3">
                                     <label for="email_address" class="form-label">Email Address</label>
-                                    <input type="text" class="form-control" id="email_address" name="email_address" value="<?=set_value('email_address')?>">
+                                    <input type="text" class="form-control" id="email_address" name="email_address" value="<?=set_value('email_address', $user->email_address)?>">
                                 </div>
                                 <div class="mb-3">
                                     <label for="password" class="form-label">Password</label>
-                                    <input type="password" class="form-control" id="password" name="password" value="<?=set_value('password')?>">
+                                    <input type="password" class="form-control" id="password" name="password" value="<?=set_value('password', $user->password)?>">
                                 </div>
                                 <div class="mb-3">
                                     <label for="confirm_password" class="form-label">Confirm Password</label>
@@ -111,10 +111,10 @@
                                 <option value="Dean">Dean</option>
                                 <option value="Full-Time Teacher">Full-Time Teacher</option>
                                 <option value="Part-Time Teacher">Part-Time Teacher</option>
-                                <option value="<?=set_value('position')?>" selected hidden><?=set_value('position')?></option>
+                                <option value="<?=set_value('position', $user->position)?>" selected hidden><?=set_value('position', $user->position)?></option>
                             </select>
                         </div>
-                        <button type="submit" class="btn w-100" id="custom-button-color">Register</button>
+                        <button type="submit" class="btn w-100" id="custom-button-color">Save</button>
                         <a href="<?=base_url()?>teacher/list" class=" btn w-100 mt-3" id="custom-button-color">Back</a>
                     </form>
                 </div>

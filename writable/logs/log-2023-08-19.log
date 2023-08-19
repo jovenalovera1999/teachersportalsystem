@@ -1,0 +1,598 @@
+INFO - 2023-08-19 01:40:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-19 01:40:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-19 01:40:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-19 01:41:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-19 01:42:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-19 01:42:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-08-19 02:04:55 --> Too few arguments to function App\Controllers\Teacher::view(), 0 passed in C:\xampp\htdocs\teachersportalsystem\system\CodeIgniter.php on line 932 and exactly 1 expected
+in APPPATH\Controllers\Teacher.php on line 96.
+ 1 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Teacher->view()
+ 2 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Teacher))
+ 3 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-08-19 02:05:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-08-19 02:05:03 --> Undefined variable $user
+in APPPATH\Views\teacher\view.php on line 73.
+ 1 APPPATH\Views\teacher\view.php(73): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $user', 'C:\\xampp\\htdocs\\teachersportalsystem\\app\\Views\\teacher\\view.php', 73)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\teachersportalsystem\\app\\Views\\teacher\\view.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1176): CodeIgniter\View\View->render('teacher/view', [], true)
+ 5 APPPATH\Controllers\Teacher.php(100): view('teacher/view')
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Teacher->view('1')
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Teacher))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-08-19 02:05:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-08-19 02:05:20 --> Undefined property: stdClass::$gender
+in APPPATH\Views\teacher\view.php on line 85.
+ 1 APPPATH\Views\teacher\view.php(85): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$gender', 'C:\\xampp\\htdocs\\teachersportalsystem\\app\\Views\\teacher\\view.php', 85)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\teachersportalsystem\\app\\Views\\teacher\\view.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1176): CodeIgniter\View\View->render('teacher/view', [], true)
+ 5 APPPATH\Controllers\Teacher.php(100): view('teacher/view', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Teacher->view('1')
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Teacher))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-08-19 02:06:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-19 02:06:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-19 02:07:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-19 02:08:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-19 02:21:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-19 02:21:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-19 02:22:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-19 02:22:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-19 02:22:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-19 02:46:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-19 03:04:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-19 03:04:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-19 03:05:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-08-19 03:05:58 --> CodeIgniter\HTTP\RedirectResponse::to(): Argument #2 ($code) must be of type ?int, array given, called in C:\xampp\htdocs\teachersportalsystem\app\Controllers\Teacher.php on line 182
+in SYSTEMPATH\HTTP\RedirectResponse.php on line 32.
+ 1 APPPATH\Controllers\Teacher.php(182): CodeIgniter\HTTP\RedirectResponse->to('teacher/edit', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Teacher->edit('4')
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Teacher))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-08-19 03:07:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-19 03:07:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-19 03:07:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-19 03:07:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-19 03:07:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-08-19 03:07:48 --> CodeIgniter\HTTP\RedirectResponse::to(): Argument #2 ($code) must be of type ?int, array given, called in C:\xampp\htdocs\teachersportalsystem\app\Controllers\Teacher.php on line 182
+in SYSTEMPATH\HTTP\RedirectResponse.php on line 32.
+ 1 APPPATH\Controllers\Teacher.php(182): CodeIgniter\HTTP\RedirectResponse->to('teacher/edit', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Teacher->edit('4')
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Teacher))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-08-19 03:08:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-19 03:08:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-19 03:08:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-08-19 03:08:47 --> 4 is not a valid HTTP return status code
+in SYSTEMPATH\HTTP\ResponseTrait.php on line 155.
+ 1 SYSTEMPATH\HTTP\ResponseTrait.php(155): CodeIgniter\HTTP\Exceptions\HTTPException::forInvalidStatusCode(4)
+ 2 SYSTEMPATH\HTTP\ResponseTrait.php(544): CodeIgniter\HTTP\Response->setStatusCode(4)
+ 3 SYSTEMPATH\HTTP\RedirectResponse.php(40): CodeIgniter\HTTP\Response->redirect('http://localhost/teachersportalsystem/index.php/teacher/edit', 'auto', 4)
+ 4 APPPATH\Controllers\Teacher.php(182): CodeIgniter\HTTP\RedirectResponse->to('http://localhost/teachersportalsystem/index.php/teacher/edit', 4)
+ 5 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Teacher->edit('4')
+ 6 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Teacher))
+ 7 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-08-19 03:09:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-19 03:09:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-19 03:09:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-08-19 03:09:34 --> Too few arguments to function App\Controllers\Teacher::edit(), 0 passed in C:\xampp\htdocs\teachersportalsystem\system\CodeIgniter.php on line 932 and exactly 1 expected
+in APPPATH\Controllers\Teacher.php on line 105.
+ 1 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Teacher->edit()
+ 2 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Teacher))
+ 3 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-08-19 03:10:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-19 03:10:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-08-19 03:10:58 --> CodeIgniter\HTTP\RedirectResponse::to(): Argument #2 ($code) must be of type ?int, array given, called in C:\xampp\htdocs\teachersportalsystem\app\Controllers\Teacher.php on line 182
+in SYSTEMPATH\HTTP\RedirectResponse.php on line 32.
+ 1 APPPATH\Controllers\Teacher.php(182): CodeIgniter\HTTP\RedirectResponse->to('teacher/edit', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Teacher->edit('4')
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Teacher))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-08-19 03:14:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-19 03:14:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-08-19 03:14:58 --> CodeIgniter\HTTP\RedirectResponse::to(): Argument #2 ($code) must be of type ?int, array given, called in C:\xampp\htdocs\teachersportalsystem\app\Controllers\Teacher.php on line 182
+in SYSTEMPATH\HTTP\RedirectResponse.php on line 32.
+ 1 APPPATH\Controllers\Teacher.php(182): CodeIgniter\HTTP\RedirectResponse->to('teacher/edit', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Teacher->edit('4')
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Teacher))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-08-19 03:15:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-19 03:16:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-08-19 03:16:02 --> Too few arguments to function App\Controllers\Teacher::edit(), 0 passed in C:\xampp\htdocs\teachersportalsystem\system\CodeIgniter.php on line 932 and exactly 1 expected
+in APPPATH\Controllers\Teacher.php on line 105.
+ 1 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Teacher->edit()
+ 2 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Teacher))
+ 3 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-08-19 03:16:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-08-19 03:16:15 --> Too few arguments to function App\Controllers\Teacher::edit(), 0 passed in C:\xampp\htdocs\teachersportalsystem\system\CodeIgniter.php on line 932 and exactly 1 expected
+in APPPATH\Controllers\Teacher.php on line 105.
+ 1 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Teacher->edit()
+ 2 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Teacher))
+ 3 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-08-19 03:17:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-19 03:17:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-19 03:17:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-19 03:17:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-19 03:38:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-19 03:38:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-19 03:38:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-19 03:38:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-19 03:38:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-08-19 03:45:49 --> include(include/toast_message): Failed to open stream: No such file or directory
+in APPPATH\Views\teacher\register.php on line 34.
+ 1 APPPATH\Views\teacher\register.php(34): CodeIgniter\Debug\Exceptions->errorHandler(2, 'include(include/toast_message): Failed to open stream: No such file or directory', 'C:\\xampp\\htdocs\\teachersportalsystem\\app\\Views\\teacher\\register.php', 34)
+ 2 APPPATH\Views\teacher\register.php(34): include()
+ 3 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\teachersportalsystem\\app\\Views\\teacher\\register.php')
+ 4 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1176): CodeIgniter\View\View->render('teacher/register', [], true)
+ 6 APPPATH\Controllers\Teacher.php(93): view('teacher/register', [])
+ 7 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Teacher->register()
+ 8 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Teacher))
+ 9 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-19 03:46:08 --> Call to undefined function extend()
+in APPPATH\Views\teacher\register.php on line 34.
+ 1 SYSTEMPATH\View\View.php(224): include()
+ 2 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1176): CodeIgniter\View\View->render('teacher/register', [], true)
+ 4 APPPATH\Controllers\Teacher.php(93): view('teacher/register', [])
+ 5 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Teacher->register()
+ 6 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Teacher))
+ 7 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-08-19 03:46:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-19 03:46:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-19 03:47:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-19 03:47:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-19 03:53:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-19 03:53:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-19 04:06:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-19 04:06:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-19 04:06:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-08-19 04:06:57 --> Undefined variable $post
+in APPPATH\Controllers\Teacher.php on line 208.
+ 1 APPPATH\Controllers\Teacher.php(208): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $post', 'C:\\xampp\\htdocs\\teachersportalsystem\\app\\Controllers\\Teacher.php', 208)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Teacher->destroy('10')
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Teacher))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-19 04:07:01 --> Attempt to read property "user_id" on null
+in APPPATH\Views\teacher\delete.php on line 38.
+ 1 APPPATH\Views\teacher\delete.php(38): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "user_id" on null', 'C:\\xampp\\htdocs\\teachersportalsystem\\app\\Views\\teacher\\delete.php', 38)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\teachersportalsystem\\app\\Views\\teacher\\delete.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1176): CodeIgniter\View\View->render('teacher/delete', [], true)
+ 5 APPPATH\Controllers\Teacher.php(194): view('teacher/delete', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Teacher->delete('10')
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Teacher))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-08-19 05:51:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-19 05:52:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-19 05:52:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-08-19 05:52:51 --> Undefined variable $post
+in APPPATH\Controllers\Teacher.php on line 208.
+ 1 APPPATH\Controllers\Teacher.php(208): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $post', 'C:\\xampp\\htdocs\\teachersportalsystem\\app\\Controllers\\Teacher.php', 208)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Teacher->destroy('6')
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Teacher))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-19 05:52:54 --> Attempt to read property "user_id" on null
+in APPPATH\Views\teacher\delete.php on line 38.
+ 1 APPPATH\Views\teacher\delete.php(38): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "user_id" on null', 'C:\\xampp\\htdocs\\teachersportalsystem\\app\\Views\\teacher\\delete.php', 38)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\teachersportalsystem\\app\\Views\\teacher\\delete.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1176): CodeIgniter\View\View->render('teacher/delete', [], true)
+ 5 APPPATH\Controllers\Teacher.php(194): view('teacher/delete', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Teacher->delete('6')
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Teacher))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-08-19 05:52:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-19 05:54:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-08-19 05:54:34 --> Call to undefined function App\Controllers\redirected()
+in APPPATH\Controllers\Teacher.php on line 219.
+ 1 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Teacher->destroy('8')
+ 2 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Teacher))
+ 3 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-19 05:54:45 --> Attempt to read property "user_id" on null
+in APPPATH\Views\teacher\delete.php on line 38.
+ 1 APPPATH\Views\teacher\delete.php(38): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "user_id" on null', 'C:\\xampp\\htdocs\\teachersportalsystem\\app\\Views\\teacher\\delete.php', 38)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\teachersportalsystem\\app\\Views\\teacher\\delete.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1176): CodeIgniter\View\View->render('teacher/delete', [], true)
+ 5 APPPATH\Controllers\Teacher.php(194): view('teacher/delete', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Teacher->delete('8')
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Teacher))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-08-19 05:54:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-19 06:00:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-19 06:00:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-19 06:00:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-19 06:01:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-19 06:01:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-19 06:02:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-19 06:02:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-08-19 06:09:29 --> include(include/toast_message): Failed to open stream: No such file or directory
+in APPPATH\Views\teacher\register.php on line 34.
+ 1 APPPATH\Views\teacher\register.php(34): CodeIgniter\Debug\Exceptions->errorHandler(2, 'include(include/toast_message): Failed to open stream: No such file or directory', 'C:\\xampp\\htdocs\\teachersportalsystem\\app\\Views\\teacher\\register.php', 34)
+ 2 APPPATH\Views\teacher\register.php(34): include()
+ 3 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\teachersportalsystem\\app\\Views\\teacher\\register.php')
+ 4 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1176): CodeIgniter\View\View->render('teacher/register', [], true)
+ 6 APPPATH\Controllers\Teacher.php(93): view('teacher/register', [])
+ 7 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Teacher->register()
+ 8 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Teacher))
+ 9 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-19 06:09:39 --> include(include/toast_message): Failed to open stream: No such file or directory
+in APPPATH\Views\teacher\list.php on line 34.
+ 1 APPPATH\Views\teacher\list.php(34): CodeIgniter\Debug\Exceptions->errorHandler(2, 'include(include/toast_message): Failed to open stream: No such file or directory', 'C:\\xampp\\htdocs\\teachersportalsystem\\app\\Views\\teacher\\list.php', 34)
+ 2 APPPATH\Views\teacher\list.php(34): include()
+ 3 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\teachersportalsystem\\app\\Views\\teacher\\list.php')
+ 4 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1176): CodeIgniter\View\View->render('teacher/list', [], true)
+ 6 APPPATH\Controllers\Teacher.php(13): view('teacher/list', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Teacher->list()
+ 8 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Teacher))
+ 9 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-19 06:09:41 --> include(include/toast_message): Failed to open stream: No such file or directory
+in APPPATH\Views\teacher\delete.php on line 35.
+ 1 APPPATH\Views\teacher\delete.php(35): CodeIgniter\Debug\Exceptions->errorHandler(2, 'include(include/toast_message): Failed to open stream: No such file or directory', 'C:\\xampp\\htdocs\\teachersportalsystem\\app\\Views\\teacher\\delete.php', 35)
+ 2 APPPATH\Views\teacher\delete.php(35): include()
+ 3 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\teachersportalsystem\\app\\Views\\teacher\\delete.php')
+ 4 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1176): CodeIgniter\View\View->render('teacher/delete', [], true)
+ 6 APPPATH\Controllers\Teacher.php(218): view('teacher/delete', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Teacher->delete('11')
+ 8 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Teacher))
+ 9 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-19 06:09:43 --> include(include/toast_message): Failed to open stream: No such file or directory
+in APPPATH\Views\teacher\delete.php on line 35.
+ 1 APPPATH\Views\teacher\delete.php(35): CodeIgniter\Debug\Exceptions->errorHandler(2, 'include(include/toast_message): Failed to open stream: No such file or directory', 'C:\\xampp\\htdocs\\teachersportalsystem\\app\\Views\\teacher\\delete.php', 35)
+ 2 APPPATH\Views\teacher\delete.php(35): include()
+ 3 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\teachersportalsystem\\app\\Views\\teacher\\delete.php')
+ 4 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1176): CodeIgniter\View\View->render('teacher/delete', [], true)
+ 6 APPPATH\Controllers\Teacher.php(218): view('teacher/delete', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Teacher->delete('7')
+ 8 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Teacher))
+ 9 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-08-19 06:10:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-19 06:10:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-19 06:10:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-19 06:10:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-19 06:11:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-19 06:11:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-19 06:11:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-19 06:11:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-19 06:11:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-19 06:12:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-19 06:12:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-19 06:12:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-19 06:12:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-19 06:13:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-19 06:13:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-19 06:13:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-08-19 06:13:42 --> include(include/toast_message): Failed to open stream: No such file or directory
+in APPPATH\Views\teacher\delete.php on line 35.
+ 1 APPPATH\Views\teacher\delete.php(35): CodeIgniter\Debug\Exceptions->errorHandler(2, 'include(include/toast_message): Failed to open stream: No such file or directory', 'C:\\xampp\\htdocs\\teachersportalsystem\\app\\Views\\teacher\\delete.php', 35)
+ 2 APPPATH\Views\teacher\delete.php(35): include()
+ 3 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\teachersportalsystem\\app\\Views\\teacher\\delete.php')
+ 4 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1176): CodeIgniter\View\View->render('teacher/delete', [], true)
+ 6 APPPATH\Controllers\Teacher.php(218): view('teacher/delete', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Teacher->delete('4')
+ 8 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Teacher))
+ 9 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-08-19 06:13:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-19 06:14:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-19 06:14:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-19 06:16:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-19 06:19:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-08-19 06:35:48 --> Call to undefined method App\Models\StudentModel::order_by
+in SYSTEMPATH\Model.php on line 838.
+ 1 APPPATH\Controllers\Student.php(13): CodeIgniter\Model->__call('order_by', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Student->list()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Student))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-19 06:36:11 --> Call to undefined method App\Models\StudentModel::order_by
+in SYSTEMPATH\Model.php on line 838.
+ 1 APPPATH\Controllers\Student.php(13): CodeIgniter\Model->__call('order_by', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Student->list()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Student))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-08-19 06:36:38 --> mysqli_sql_exception: Column 'first_name' in order clause is ambiguous in C:\xampp\htdocs\teachersportalsystem\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\teachersportalsystem\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `tbl_use...', 0)
+#1 C:\xampp\htdocs\teachersportalsystem\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `tbl_use...')
+#2 C:\xampp\htdocs\teachersportalsystem\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `tbl_use...')
+#3 C:\xampp\htdocs\teachersportalsystem\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `tbl_use...', Array, false)
+#4 C:\xampp\htdocs\teachersportalsystem\system\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\teachersportalsystem\system\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\teachersportalsystem\app\Controllers\Student.php(13): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\teachersportalsystem\system\CodeIgniter.php(932): App\Controllers\Student->list()
+#8 C:\xampp\htdocs\teachersportalsystem\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Student))
+#9 C:\xampp\htdocs\teachersportalsystem\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\teachersportalsystem\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2023-08-19 06:36:38 --> Column 'first_name' in order clause is ambiguous
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `tbl_users`.`first_name` as `user_first_name`, `tbl_users`.`middle_name` as `user_middle_name`, `tbl_users`.`last_name` as `user_last_name`
+FROM `tbl_students`
+JOIN `tbl_genders` ON `tbl_genders`.`gender_id` = `tbl_students`.`gender_id`
+JOIN `tbl_users` ON `tbl_users`.`user_id` = `tbl_students`.`user_id`
+ORDER BY `first_name` ASC', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `tbl_users`.`first_name` as `user_first_name`, `tbl_users`.`middle_name` as `user_middle_name`, `tbl_users`.`last_name` as `user_last_name`
+FROM `tbl_students`
+JOIN `tbl_genders` ON `tbl_genders`.`gender_id` = `tbl_students`.`gender_id`
+JOIN `tbl_users` ON `tbl_users`.`user_id` = `tbl_students`.`user_id`
+ORDER BY `first_name` ASC')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `tbl_users`.`first_name` as `user_first_name`, `tbl_users`.`middle_name` as `user_middle_name`, `tbl_users`.`last_name` as `user_last_name`
+FROM `tbl_students`
+JOIN `tbl_genders` ON `tbl_genders`.`gender_id` = `tbl_students`.`gender_id`
+JOIN `tbl_users` ON `tbl_users`.`user_id` = `tbl_students`.`user_id`
+ORDER BY `first_name` ASC')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `tbl_users`.`first_name` as `user_first_name`, `tbl_users`.`middle_name` as `user_middle_name`, `tbl_users`.`last_name` as `user_last_name`
+FROM `tbl_students`
+JOIN `tbl_genders` ON `tbl_genders`.`gender_id` = `tbl_students`.`gender_id`
+JOIN `tbl_users` ON `tbl_users`.`user_id` = `tbl_students`.`user_id`
+ORDER BY `first_name` ASC', [], false)
+ 5 SYSTEMPATH\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Controllers\Student.php(13): CodeIgniter\BaseModel->findAll()
+ 8 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Student->list()
+ 9 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Student))
+10 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-08-19 06:36:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-19 06:37:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-19 06:38:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-19 06:38:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-19 06:38:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-19 06:44:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-08-19 06:44:01 --> Call to undefined function set_value()
+in APPPATH\Views\student\add.php on line 59.
+ 1 SYSTEMPATH\View\View.php(224): include()
+ 2 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1176): CodeIgniter\View\View->render('student/add', [], true)
+ 4 APPPATH\Controllers\Student.php(19): view('student/add')
+ 5 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Student->add()
+ 6 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Student))
+ 7 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-19 06:46:01 --> syntax error, unexpected token ";"
+in APPPATH\Views\student\add.php on line 59.
+ 1 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1176): CodeIgniter\View\View->render('student/add', [], true)
+ 3 APPPATH\Controllers\Student.php(19): view('student/add')
+ 4 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Student->add()
+ 5 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Student))
+ 6 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-08-19 06:47:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-19 06:47:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-19 06:48:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-19 06:48:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-19 06:48:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-19 06:49:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-19 06:49:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-19 07:15:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-19 07:19:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-08-19 07:19:40 --> Call to a member function first() on string
+in APPPATH\Controllers\Student.php on line 44.
+ 1 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Student->add()
+ 2 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Student))
+ 3 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-08-19 07:20:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-19 07:20:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-19 07:20:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-19 07:21:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-19 07:22:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-19 07:22:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-19 07:23:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-19 07:25:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-19 07:25:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-19 07:25:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-19 07:25:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-19 07:25:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-19 07:26:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-08-19 07:26:06 --> Undefined property: stdClass::$first_name
+in APPPATH\Views\student\list.php on line 56.
+ 1 APPPATH\Views\student\list.php(56): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$first_name', 'C:\\xampp\\htdocs\\teachersportalsystem\\app\\Views\\student\\list.php', 56)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\teachersportalsystem\\app\\Views\\student\\list.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1176): CodeIgniter\View\View->render('student/list', [], true)
+ 5 APPPATH\Controllers\Student.php(14): view('student/list', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Student->list()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Student))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-08-19 07:28:02 --> mysqli_sql_exception: Unknown column 'tbl_students.gender' in 'field list' in C:\xampp\htdocs\teachersportalsystem\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\teachersportalsystem\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `tbl_stu...', 0)
+#1 C:\xampp\htdocs\teachersportalsystem\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `tbl_stu...')
+#2 C:\xampp\htdocs\teachersportalsystem\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `tbl_stu...')
+#3 C:\xampp\htdocs\teachersportalsystem\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `tbl_stu...', Array, false)
+#4 C:\xampp\htdocs\teachersportalsystem\system\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\teachersportalsystem\system\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\teachersportalsystem\app\Controllers\Student.php(15): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\teachersportalsystem\system\CodeIgniter.php(932): App\Controllers\Student->list()
+#8 C:\xampp\htdocs\teachersportalsystem\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Student))
+#9 C:\xampp\htdocs\teachersportalsystem\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\teachersportalsystem\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2023-08-19 07:28:02 --> Unknown column 'tbl_students.gender' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `tbl_students`.`first_name`, `tbl_students`.`middle_name`, `tbl_students`.`last_name`, `tbl_students`.`gender`, `tbl_students`.`age`, `tbl_students`.`address`, `tbl_students`.`contact_number`, `tbl_students`.`email_address`, `tbl_users`.`first_name` as `user_first_name`, `tbl_users`.`middle_name` as `user_middle_name`, `tbl_users`.`last_name` as `user_last_name`
+FROM `tbl_students`
+JOIN `tbl_genders` ON `tbl_genders`.`gender_id` = `tbl_students`.`gender_id`
+JOIN `tbl_users` ON `tbl_users`.`user_id` = `tbl_students`.`user_id`
+ORDER BY `tbl_students`.`first_name` ASC', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `tbl_students`.`first_name`, `tbl_students`.`middle_name`, `tbl_students`.`last_name`, `tbl_students`.`gender`, `tbl_students`.`age`, `tbl_students`.`address`, `tbl_students`.`contact_number`, `tbl_students`.`email_address`, `tbl_users`.`first_name` as `user_first_name`, `tbl_users`.`middle_name` as `user_middle_name`, `tbl_users`.`last_name` as `user_last_name`
+FROM `tbl_students`
+JOIN `tbl_genders` ON `tbl_genders`.`gender_id` = `tbl_students`.`gender_id`
+JOIN `tbl_users` ON `tbl_users`.`user_id` = `tbl_students`.`user_id`
+ORDER BY `tbl_students`.`first_name` ASC')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `tbl_students`.`first_name`, `tbl_students`.`middle_name`, `tbl_students`.`last_name`, `tbl_students`.`gender`, `tbl_students`.`age`, `tbl_students`.`address`, `tbl_students`.`contact_number`, `tbl_students`.`email_address`, `tbl_users`.`first_name` as `user_first_name`, `tbl_users`.`middle_name` as `user_middle_name`, `tbl_users`.`last_name` as `user_last_name`
+FROM `tbl_students`
+JOIN `tbl_genders` ON `tbl_genders`.`gender_id` = `tbl_students`.`gender_id`
+JOIN `tbl_users` ON `tbl_users`.`user_id` = `tbl_students`.`user_id`
+ORDER BY `tbl_students`.`first_name` ASC')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `tbl_students`.`first_name`, `tbl_students`.`middle_name`, `tbl_students`.`last_name`, `tbl_students`.`gender`, `tbl_students`.`age`, `tbl_students`.`address`, `tbl_students`.`contact_number`, `tbl_students`.`email_address`, `tbl_users`.`first_name` as `user_first_name`, `tbl_users`.`middle_name` as `user_middle_name`, `tbl_users`.`last_name` as `user_last_name`
+FROM `tbl_students`
+JOIN `tbl_genders` ON `tbl_genders`.`gender_id` = `tbl_students`.`gender_id`
+JOIN `tbl_users` ON `tbl_users`.`user_id` = `tbl_students`.`user_id`
+ORDER BY `tbl_students`.`first_name` ASC', [], false)
+ 5 SYSTEMPATH\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Controllers\Student.php(15): CodeIgniter\BaseModel->findAll()
+ 8 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Student->list()
+ 9 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Student))
+10 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-08-19 07:28:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-08-19 07:28:36 --> Undefined property: stdClass::$created_at
+in APPPATH\Views\student\list.php on line 64.
+ 1 APPPATH\Views\student\list.php(64): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$created_at', 'C:\\xampp\\htdocs\\teachersportalsystem\\app\\Views\\student\\list.php', 64)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\teachersportalsystem\\app\\Views\\student\\list.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1176): CodeIgniter\View\View->render('student/list', [], true)
+ 5 APPPATH\Controllers\Student.php(16): view('student/list', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Student->list()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Student))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-08-19 07:29:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-08-19 07:29:02 --> Undefined property: stdClass::$student_id
+in APPPATH\Views\student\list.php on line 68.
+ 1 APPPATH\Views\student\list.php(68): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$student_id', 'C:\\xampp\\htdocs\\teachersportalsystem\\app\\Views\\student\\list.php', 68)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\teachersportalsystem\\app\\Views\\student\\list.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1176): CodeIgniter\View\View->render('student/list', [], true)
+ 5 APPPATH\Controllers\Student.php(16): view('student/list', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Student->list()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Student))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-08-19 07:29:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-19 07:31:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-19 07:31:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-19 07:40:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-19 07:41:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-19 07:41:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-19 07:41:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-19 07:41:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-08-19 07:55:26 --> Too few arguments to function App\Controllers\Student::view(), 0 passed in C:\xampp\htdocs\teachersportalsystem\system\CodeIgniter.php on line 932 and exactly 1 expected
+in APPPATH\Controllers\Student.php on line 84.
+ 1 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Student->view()
+ 2 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Student))
+ 3 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-08-19 07:55:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-19 07:55:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-19 07:55:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-08-19 07:55:57 --> Undefined variable $student
+in APPPATH\Views\student\view.php on line 59.
+ 1 APPPATH\Views\student\view.php(59): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $student', 'C:\\xampp\\htdocs\\teachersportalsystem\\app\\Views\\student\\view.php', 59)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\teachersportalsystem\\app\\Views\\student\\view.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1176): CodeIgniter\View\View->render('student/view', [], true)
+ 5 APPPATH\Controllers\Student.php(93): view('student/view', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Student->view('4')
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Student))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-08-19 07:56:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-19 07:56:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-19 07:56:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-19 07:56:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-19 07:57:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-19 07:57:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-19 07:57:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-19 07:57:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-19 07:58:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-19 07:58:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-19 07:58:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-19 07:58:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-19 07:58:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-19 08:02:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-19 08:02:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-19 08:02:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-19 08:02:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-08-19 09:37:12 --> Undefined variable $route
+in APPPATH\Config\Routes.php on line 47.
+ 1 APPPATH\Config\Routes.php(47): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $route', 'C:\\xampp\\htdocs\\teachersportalsystem\\app\\Config\\Routes.php', 47)
+ 2 SYSTEMPATH\Router\RouteCollection.php(267): require('C:\\xampp\\htdocs\\teachersportalsystem\\app\\Config\\Routes.php')
+ 3 SYSTEMPATH\CodeIgniter.php(800): CodeIgniter\Router\RouteCollection->loadRoutes()
+ 4 SYSTEMPATH\CodeIgniter.php(447): CodeIgniter\CodeIgniter->tryToRouteIt(null)
+ 5 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-19 09:37:16 --> Undefined variable $route
+in APPPATH\Config\Routes.php on line 47.
+ 1 APPPATH\Config\Routes.php(47): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $route', 'C:\\xampp\\htdocs\\teachersportalsystem\\app\\Config\\Routes.php', 47)
+ 2 SYSTEMPATH\Router\RouteCollection.php(267): require('C:\\xampp\\htdocs\\teachersportalsystem\\app\\Config\\Routes.php')
+ 3 SYSTEMPATH\CodeIgniter.php(800): CodeIgniter\Router\RouteCollection->loadRoutes()
+ 4 SYSTEMPATH\CodeIgniter.php(447): CodeIgniter\CodeIgniter->tryToRouteIt(null)
+ 5 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-08-19 09:37:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-19 09:37:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-08-19 09:37:37 --> Undefined property: stdClass::$user_id
+in APPPATH\Views\student\edit.php on line 54.
+ 1 APPPATH\Views\student\edit.php(54): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$user_id', 'C:\\xampp\\htdocs\\teachersportalsystem\\app\\Views\\student\\edit.php', 54)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\teachersportalsystem\\app\\Views\\student\\edit.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1176): CodeIgniter\View\View->render('student/edit', [], true)
+ 5 APPPATH\Controllers\Student.php(165): view('student/edit', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Student->edit('1')
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Student))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-08-19 09:37:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-19 09:37:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-19 09:37:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-19 09:38:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-19 10:16:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-19 10:16:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-19 10:16:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-19 10:16:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-19 10:38:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-19 10:38:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-19 10:38:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-19 10:38:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-19 10:38:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-19 10:38:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-19 10:38:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-19 10:38:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-19 10:38:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-19 10:38:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-19 10:39:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-19 10:39:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-19 10:41:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-19 10:41:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-19 10:41:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-19 10:41:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-19 10:41:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-19 10:41:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
