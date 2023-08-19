@@ -10,7 +10,7 @@ class Student extends BaseController
         $data['students'] = $studentModel->select('tbl_students.student_id, tbl_students.first_name, tbl_students.middle_name, tbl_students.last_name,
         tbl_genders.gender, tbl_students.age, tbl_students.address, tbl_students.contact_number, tbl_students.email_address,
         tbl_users.first_name as user_first_name, tbl_users.middle_name as user_middle_name, tbl_users.last_name as user_last_name,
-        tbl_students.created_at, tbl_students.updated_at')
+        tbl_students.created_at, tbl_students.updated_at')->where('tbl_students.user_id', session()->get('myUserId'))
         ->join('tbl_genders', 'tbl_genders.gender_id = tbl_students.gender_id')
         ->join('tbl_users', 'tbl_users.user_id = tbl_students.user_id')
         ->orderBy('tbl_students.first_name', 'asc')->findAll();

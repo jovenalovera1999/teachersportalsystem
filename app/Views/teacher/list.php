@@ -16,15 +16,24 @@
             <div class="p-4">
                 <h1><a href="#" class="logo">Dean's Portal<span class="text-white mt-4" style="font-size: 17px;">User Logged In:<br>Dev Jov</span></a></h1>
                 <ul class="list-unstyled components mb-5">
-                    <li class="active">
-                        <a href="<?=base_url()?>teacher/list">Teachers</a>
-                    </li>
-                    <li>
-                        <a href="<?=base_url()?>student/list">Students</a>
-                    </li>
-                    <li>
-                        <a href="#">Logout</a>
-                    </li>
+                    <?php if(session()->get('isUserDeanLoggedIn')): ?>
+                        <li class="active">
+                            <a href="<?=base_url()?>teacher/list">Teachers</a>
+                        </li>
+                        <li>
+                            <a href="<?=base_url()?>student/list">Students</a>
+                        </li>
+                        <li>
+                            <a href="<?=base_url()?>logout">Logout</a>
+                        </li>
+                    <?php else: ?>
+                        <li>
+                            <a href="<?=base_url()?>student/list">Students</a>
+                        </li>
+                        <li>
+                            <a href="<?=base_url()?>logout">Logout</a>
+                        </li>
+                    <?php endif; ?>
                 </ul>
             </div>
         </nav>
