@@ -28,10 +28,10 @@
             <h3 class="card-title">Teacher's Portal</h3>
             <h5 class="card-subtitle mb-2 text-muted">User authentication</h5>
             <!-- Form login -->
-            <form class="mt-5" action="<?=base_url()?>login" method="post">
+            <form class="mt-5" action="<?=base_url()?>" method="post">
                 <div class="mb-3">
                     <label for="email_address" class="form-label">Email Address</label>
-                    <input type="text" class="form-control" id="email_address" name="email_address">
+                    <input type="text" class="form-control" id="email_address" name="email_address" value="<?=set_value('email_address')?>">
                 </div>
                 <div class="mb-3">
                     <label for="password" class="form-label">Password</label>

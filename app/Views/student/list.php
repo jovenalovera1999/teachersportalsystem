@@ -14,9 +14,9 @@
                 </button>
             </div>
             <div class="p-4">
-                <h1><a href="#" class="logo">Dean's Portal<span class="text-white mt-4" style="font-size: 17px;">User Logged In:<br>Dev Jov</span></a></h1>
+                <h1><a href="#" class="logo">Teacher's Portal<span class="text-white mt-4" style="font-size: 17px;">User Logged In:<br><?=session()->get('myFullName')?></span></a></h1>
                 <ul class="list-unstyled components mb-5">
-                    <?php if(session()->get('isUserDeanLoggedIn')): ?>
+                    <?php if(session()->get('myPosition') == 'Dean'): ?>
                         <li>
                             <a href="<?=base_url()?>teacher/list">Teachers</a>
                         </li>
@@ -53,7 +53,6 @@
                             <th>Address</th>
                             <th>Contact Number</th>
                             <th>Email Address</th>
-                            <th>Added By</th>
                             <th>Created At</th>
                             <th>Updated At</th>
                             <th>Action</th>
@@ -69,11 +68,6 @@
                                 <td><?=$student->address?></td>
                                 <td><?=$student->contact_number?></td>
                                 <td><?=$student->email_address?></td>
-                                <?php if(empty($student->user_middle_name)): ?>
-                                    <td><?=$student->user_first_name . ' ' . $student->user_last_name?></td>
-                                <?php else: ?>
-                                    <td><?=$student->user_first_name . ' ' . $student->user_middle_name[0] . '. ' . $student->user_last_name?></td>
-                                <?php endif; ?>
                                 <td><?=$student->created_at?></td>
                                 <td><?=$student->updated_at?></td>
                                 <td>
