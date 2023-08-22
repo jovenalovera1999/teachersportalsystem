@@ -41,6 +41,7 @@ $routes->group('', ['filter' => 'AuthUser'], function($routes)
     $routes->get('/teacher/dashboard', 'Teacher::dashboard');
     $routes->get('/teacher/list', 'Teacher::list');
     $routes->get('/teacher/register', 'Teacher::register');
+    $routes->post('/teacher/register', 'Teacher::register');
     $routes->get('/teacher/view/(:num)', 'Teacher::view/$1');
     $routes->get('/teacher/edit/(:num)', 'Teacher::edit/$1');
     $routes->post('/teacher/edit/(:num)', 'Teacher::edit/$1');
@@ -48,13 +49,16 @@ $routes->group('', ['filter' => 'AuthUser'], function($routes)
     $routes->post('teacher/delete/(:num)', 'Teacher::delete/$1');
     $routes->get('/student/list', 'Student::list');
     $routes->get('/student/add', 'Student::add');
+    $routes->post('/student/add', 'Student::add');
     $routes->get('/student/view/(:num)', 'Student::view/$1');
     $routes->get('/student/edit/(:num)', 'Student::edit/$1');
     $routes->post('/student/edit/(:num)', 'Student::edit/$1');
     $routes->get('/student/delete/(:num)', 'Student::delete/$1');
     $routes->post('/student/delete/(:num)', 'Student::delete/$1');
+    $routes->get('/confirm_logout', 'Login::confirmLogout');
     $routes->get('/logout', 'Login::logout');
 });
+
 
 /*
  * --------------------------------------------------------------------

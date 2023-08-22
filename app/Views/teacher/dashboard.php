@@ -20,7 +20,7 @@
                         <a href="<?=base_url()?>student/list">Students</a>
                     </li>
                     <li>
-                        <a href="<?=base_url()?>logout">Logout</a>
+                        <a href="<?=base_url()?>confirm_logout">Logout</a>
                     </li>
                 </ul>
             </div>

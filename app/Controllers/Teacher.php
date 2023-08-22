@@ -73,6 +73,8 @@ class Teacher extends BaseController
                     $post['position_id'] = $positionModel->insert($position);
                 }
 
+                $post['password'] = sha1($post['password']);
+
                 $teacherModel = new \App\Models\UserModel();
                 $teacherModel->save($post);
 

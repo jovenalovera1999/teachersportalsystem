@@ -25,7 +25,7 @@ class Login extends BaseController
             else 
             {
                 $userModel = new \App\Models\UserModel();
-                $user = $userModel->where('email_address', $post['email_address'])->where('password', $post['password'])
+                $user = $userModel->where('email_address', $post['email_address'])->where('password', sha1($post['password']))
                 ->join('tbl_genders', 'tbl_genders.gender_id = tbl_users.gender_id', 'inner')
                 ->join('tbl_positions', 'tbl_positions.position_id = tbl_users.position_id', 'inner')->first();
 
@@ -97,13 +97,14 @@ class Login extends BaseController
         session()->set($data);
     }
 
+    public function confirmLogout() 
+    {
+        return view('logout/logout');
+    }
+
     public function logout() 
     {
         session()->destroy();
-
-        $session = session();
-        $session->setflashdata('success-logout', 'Account successfully logged out!');
-
         return redirect()->to('/');
     }
 }

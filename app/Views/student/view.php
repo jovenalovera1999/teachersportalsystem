@@ -31,7 +31,7 @@
                             <a href="<?=base_url()?>student/list">Students</a>
                         </li>
                         <li>
-                            <a href="<?=base_url()?>logout">Logout</a>
+                            <a href="<?=base_url()?>confirm_logout">Logout</a>
                         </li>
                     <?php endif; ?>
                 </ul>
@@ -97,14 +97,6 @@
                                     <label for="email_address" class="form-label">Email Address</label>
                                     <input type="text" class="form-control bg-white" id="email_address" name="email_address" value="<?=$student->email_address?>" disabled>
                                 </div>
-                            </div>
-                            <div class="mb-3">
-                                <label for="teacher" class="form-label">Teacher</label>
-                                <?php if(empty($student->user_middle_name)): ?>
-                                    <input type="text" class="form-control bg-white" id="teacher" name="teacher" value="<?=$student->user_first_name . ' ' . $student->user_last_name?>" disabled>
-                                <?php else: ?>
-                                    <input type="text" class="form-control bg-white" id="teacher" name="teacher" value="<?=$student->user_first_name . ' ' . $student->user_middle_name[0] . '. ' . $student->user_last_name?>" disabled>
-                                <?php endif; ?>
                             </div>
                         </div>
                         <a href="<?=base_url()?>student/list" class=" btn w-100 mt-3" id="custom-button-color">Back</a>
