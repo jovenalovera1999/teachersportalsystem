@@ -96,7 +96,7 @@
                                 </div>
                                 <div class="mb-3">
                                     <label for="password" class="form-label">Password</label>
-                                    <input type="password" class="form-control" id="password" name="password" value="<?=set_value('password', $user->password)?>">
+                                    <input type="password" class="form-control" id="password" name="password">
                                 </div>
                                 <div class="mb-3">
                                     <label for="confirm_password" class="form-label">Confirm Password</label>

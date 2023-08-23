@@ -6,6 +6,7 @@ class Student extends BaseController
 {
     public function list()
     {
+        // Load list of students with table genders and users using inner join
         $studentModel = new \App\Models\StudentModel();
         $data['students'] = $studentModel->select('tbl_students.student_id, tbl_students.first_name, tbl_students.middle_name, tbl_students.last_name,
         tbl_genders.gender, tbl_students.age, tbl_students.address, tbl_students.contact_number, tbl_students.email_address,
@@ -18,13 +19,17 @@ class Student extends BaseController
 
     public function add() 
     {
+        // Return add student page
         $data = array();
         helper(['form']);
 
+        // When button add clicked
         if($this->request->getMethod() == 'post') 
         {
+            // Get value from text field in add student page
             $post = $this->request->getPost(['first_name', 'middle_name', 'last_name', 'gender', 'age', 'address', 'contact_number', 'email_address']);
 
+            // Provide validation for text field
             $rules = [
                 'first_name' => ['label' => 'first name', 'rules' => 'required'],
                 'last_name' => ['label' => 'last name', 'rules' => 'required'],
@@ -41,6 +46,7 @@ class Student extends BaseController
             }
             else 
             {
+                // If gender is already exist, return primary key. Otherwise, insert gender and return primary key
                 $genderModel = new \App\Models\GenderModel();
 
                 if($genderId = $genderModel->where('gender', $post['gender'])->first()) 
@@ -53,7 +59,7 @@ class Student extends BaseController
                     $post['gender_id'] = $genderModel->insert($gender);
                 }
 
-                // Insert current user logged in primary key for foreign key in table students. 
+                // Insert current user logged in primary key to user_id column in table students
                 $post['user_id'] = session()->get('myUserId');
 
                 $studentModel = new \App\Models\StudentModel();
@@ -61,7 +67,7 @@ class Student extends BaseController
 
                 $session = session();
 
-                // Full name of teacher that will display in message.
+                // Full name of teacher that will display in message
                 $fullName = '';
                 if(empty($post['middle_name'])) 
                 {
@@ -83,6 +89,7 @@ class Student extends BaseController
 
     public function view($id) 
     {
+        // Selected one student by id with table genders and users using inner join and return it to view student page
         $studentModel = new \App\Models\StudentModel();
         $data['student'] = $studentModel->select('tbl_students.student_id, tbl_students.first_name, tbl_students.middle_name, tbl_students.last_name,
         tbl_genders.gender, tbl_students.age, tbl_students.address, tbl_students.contact_number, tbl_students.email_address,
@@ -96,6 +103,7 @@ class Student extends BaseController
 
     public function edit($id) 
     {
+        // Update selected student by id with table genders and users using inner join
         $studentModel = new \App\Models\StudentModel();
         $data['student'] = $studentModel->select('tbl_students.student_id, tbl_students.first_name, tbl_students.middle_name, tbl_students.last_name,
         tbl_genders.gender, tbl_students.age, tbl_students.address, tbl_students.contact_number, tbl_students.email_address,
@@ -106,10 +114,13 @@ class Student extends BaseController
 
         helper(['form']);
 
+        // When button save clicked
         if($this->request->getMethod() == 'post') 
         {
+            // Get value from text fields
             $post = $this->request->getPost(['first_name', 'middle_name', 'last_name', 'gender', 'age', 'address', 'contact_number', 'email_address']);
 
+            // Provide validation for text fields
             $rules = [
                 'first_name' => ['label' => 'first name', 'rules' => 'required'],
                 'last_name' => ['label' => 'last name', 'rules' => 'required'],
@@ -126,7 +137,7 @@ class Student extends BaseController
             }
             else 
             {
-                // Return primary key of gender if already exist. Otherwise, insert and return primary key.
+                // Return primary key of gender if already exist. Otherwise, insert and return primary key
                 $genderModel = new \App\Models\GenderModel();
 
                 if($genderId = $genderModel->where('gender', $post['gender'])->first()) 
@@ -143,7 +154,7 @@ class Student extends BaseController
 
                 $session = session();
 
-                // Full name of teacher that will display in message.
+                // Full name of teacher that will display in message
                 $fullName = '';
                 if(empty($post['middle_name'])) 
                 {
@@ -163,6 +174,7 @@ class Student extends BaseController
 
     public function delete($id) 
     {
+        // Select student by id and return to delete confirmation page
         $studentModel = new \App\Models\StudentModel();
         $data['student'] = $studentModel->select('tbl_students.student_id, tbl_students.first_name, tbl_students.middle_name, tbl_students.last_name,
         tbl_genders.gender, tbl_students.age, tbl_students.address, tbl_students.contact_number, tbl_students.email_address,
@@ -171,13 +183,17 @@ class Student extends BaseController
         ->join('tbl_genders', 'tbl_genders.gender_id = tbl_students.gender_id')
         ->join('tbl_users', 'tbl_users.user_id = tbl_students.user_id')->find($id);
 
+        // When button delete clicked
         if($this->request->getMethod() == 'post') 
         {
+            // Delete the selected student
             $studentModel->delete($id);
             
+            // Set and show message that student successfully deleted
             $session = session();
             $session->setflashdata('success-delete-student', 'Student successfully deleted!');
 
+            // Return to list of students page
             return redirect()->to('student/list');
         }
 
