@@ -4,13 +4,11 @@ namespace App\Controllers;
 
 class Teacher extends BaseController
 {
-    public function dashboard() 
-    {
+    public function dashboard() {
         return view('teacher/dashboard');
     }
 
-    public function list()
-    {
+    public function list() {
         // Load list of teachers with table genders and positions using inner join
         $userModel = new \App\Models\UserModel();
         $data['users'] = $userModel->select('tbl_users.user_id, first_name, middle_name, last_name, gender, address, contact_number, email_address,
@@ -21,15 +19,13 @@ class Teacher extends BaseController
         return view('teacher/list', $data);
     }
 
-    public function register()
-    {
+    public function register() {
         // Return register or add teacher page
         $data = array();
         helper(['form']);
 
         // When register button clicked
-        if($this->request->getMethod() == 'post') 
-        {
+        if($this->request->getMethod() == 'post') {
             // Get values from text fields
             $post = $this->request->getPost(['first_name','middle_name', 'last_name', 'gender', 'age', 'address', 'contact_number',
             'email_address', 'password', 'position']);
@@ -48,21 +44,15 @@ class Teacher extends BaseController
                 'position' => ['label' => 'position', 'rules' => 'required']
             ];
 
-            if(!$this->validate($rules)) 
-            {
+            if(!$this->validate($rules)) {
                 $data['validation'] = $this->validator;
-            }
-            else 
-            {
+            } else {
                 // If gender is already exist, return primary key. Otherwise, insert gender and return primary key
                 $genderModel = new \App\Models\GenderModel();
                 
-                if($genderId = $genderModel->where('gender', $post['gender'])->first()) 
-                {
+                if($genderId = $genderModel->where('gender', $post['gender'])->first()) {
                     $post['gender_id'] = $genderId->gender_id;
-                }
-                else 
-                {
+                } else {
                     $gender = ['gender' => $post['gender']];
                     $post['gender_id'] = $genderModel->insert($gender);
                 }
@@ -70,12 +60,9 @@ class Teacher extends BaseController
                 // If position is already exist, return primary key. Otherwise, insert position and return primary key
                 $positionModel = new \App\Models\PositionModel();
                 
-                if($positionId = $positionModel->where('position', $post['position'])->first()) 
-                {
+                if($positionId = $positionModel->where('position', $post['position'])->first()) {
                     $post['position_id'] = $positionId->position_id;
-                }
-                else
-                {
+                } else {
                     $position = ['position' => $post['position']];
                     $post['position_id'] = $positionModel->insert($position);
                 }
@@ -89,12 +76,9 @@ class Teacher extends BaseController
 
                 // Full name of teacher that will display in message.
                 $fullName = '';
-                if(empty($post['middle_name'])) 
-                {
+                if(empty($post['middle_name'])) {
                     $fullName = $post['first_name'] . ' ' . $post['last_name'];
-                }
-                else 
-                {
+                } else {
                     $fullName = $post['first_name'] . ' ' . $post['middle_name'][0] . '. ' . $post['last_name'];
                 }
 
@@ -107,8 +91,7 @@ class Teacher extends BaseController
         return view('teacher/register', $data);
     }
 
-    public function view($id) 
-    {
+    public function view($id) {
         // Select teacher by id with table genders and positions using inner join
         $userModel = new \App\Models\UserModel();
         $data['user'] = $userModel->join('tbl_genders', 'tbl_genders.gender_id = tbl_users.gender_id', 'inner')
@@ -117,8 +100,7 @@ class Teacher extends BaseController
         return view('teacher/view', $data);
     }
 
-    public function edit($id) 
-    {
+    public function edit($id) {
         // Select teacher by id and return to edit student page
         $userModel = new \App\Models\UserModel();
         $data['user'] = $userModel->join('tbl_genders', 'tbl_genders.gender_id = tbl_users.gender_id', 'inner')
@@ -127,8 +109,7 @@ class Teacher extends BaseController
         helper(['form']);
 
         // When save button is clicked
-        if($this->request->getMethod() == 'post') 
-        {
+        if($this->request->getMethod() == 'post') {
             // Get values from text fields
             $post = $this->request->getPost(['first_name','middle_name', 'last_name', 'gender', 'age', 'address', 'contact_number',
             'email_address', 'password', 'position']);
@@ -147,21 +128,15 @@ class Teacher extends BaseController
                 'position' => ['label' => 'position', 'rules' => 'required']
             ];
 
-            if(!$this->validate($rules)) 
-            {
+            if(!$this->validate($rules)) {
                 $data['validation'] = $this->validator;
-            }
-            else 
-            {
+            } else {
                 // If gender is already exist, return primary key. Otherwise, insert gender and return primary key
                 $genderModel = new \App\Models\GenderModel();
                 
-                if($genderId = $genderModel->where('gender', $post['gender'])->first()) 
-                {
+                if($genderId = $genderModel->where('gender', $post['gender'])->first()) {
                     $post['gender_id'] = $genderId->gender_id;
-                }
-                else 
-                {
+                } else  {
                     $gender = ['gender' => $post['gender']];
                     $post['gender_id'] = $genderModel->insert($gender);
                 }
@@ -169,12 +144,9 @@ class Teacher extends BaseController
                 // If position is already exist, return primary key. Otherwise, insert position and return primary key
                 $positionModel = new \App\Models\PositionModel();
                 
-                if($positionId = $positionModel->where('position', $post['position'])->first()) 
-                {
+                if($positionId = $positionModel->where('position', $post['position'])->first()) {
                     $post['position_id'] = $positionId->position_id;
-                }
-                else
-                {
+                } else {
                     $position = ['position' => $post['position']];
                     $post['position_id'] = $positionModel->insert($position);
                 }
@@ -189,12 +161,9 @@ class Teacher extends BaseController
 
                 // Full name of teacher that will display in message
                 $fullName = '';
-                if(empty($post['middle_name'])) 
-                {
+                if(empty($post['middle_name'])) {
                     $fullName = $post['first_name'] . ' ' . $post['last_name'];
-                }
-                else 
-                {
+                } else {
                     $fullName = $post['first_name'] . ' ' . $post['middle_name'][0] . '. ' . $post['last_name'];
                 }
 
@@ -205,8 +174,7 @@ class Teacher extends BaseController
         return view('teacher/edit', $data);
     }
 
-    public function delete($id) 
-    {
+    public function delete($id) {
         // Select teacher by id and return to delete confirmation page
         $userModel = new \App\Models\UserModel();
         $data['user'] = $userModel->join('tbl_genders', 'tbl_genders.gender_id = tbl_users.gender_id', 'inner')
@@ -214,8 +182,7 @@ class Teacher extends BaseController
         ->find($id);
 
         // When button delete is clicked
-        if($this->request->getMethod() == 'post') 
-        {
+        if($this->request->getMethod() == 'post') {
             // Delete the selected teacher
             $userModel->delete($id);
             

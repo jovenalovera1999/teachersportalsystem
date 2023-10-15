@@ -4,8 +4,7 @@ namespace App\Controllers;
 
 class Student extends BaseController
 {
-    public function list()
-    {
+    public function list() {
         // Load list of students with table genders and users using inner join
         $studentModel = new \App\Models\StudentModel();
         $data['students'] = $studentModel->select('tbl_students.student_id, tbl_students.first_name, tbl_students.middle_name, tbl_students.last_name,
@@ -17,15 +16,13 @@ class Student extends BaseController
         return view('student/list', $data);
     }
 
-    public function add() 
-    {
+    public function add() {
         // Return add student page
         $data = array();
         helper(['form']);
 
         // When button add clicked
-        if($this->request->getMethod() == 'post') 
-        {
+        if($this->request->getMethod() == 'post') {
             // Get value from text field in add student page
             $post = $this->request->getPost(['first_name', 'middle_name', 'last_name', 'gender', 'age', 'address', 'contact_number', 'email_address']);
 
@@ -40,21 +37,15 @@ class Student extends BaseController
                 'email_address' => ['label' => 'email address', 'rules' => 'required|valid_email']
             ];
 
-            if(!$this->validate($rules)) 
-            {
+            if(!$this->validate($rules)) {
                 $data['validation'] = $this->validator;
-            }
-            else 
-            {
+            } else {
                 // If gender is already exist, return primary key. Otherwise, insert gender and return primary key
                 $genderModel = new \App\Models\GenderModel();
 
-                if($genderId = $genderModel->where('gender', $post['gender'])->first()) 
-                {
+                if($genderId = $genderModel->where('gender', $post['gender'])->first()) {
                     $post['gender_id'] = $genderId->gender_id;
-                }
-                else 
-                {
+                } else {
                     $gender = ['gender' => $post['gender']];
                     $post['gender_id'] = $genderModel->insert($gender);
                 }
@@ -69,12 +60,9 @@ class Student extends BaseController
 
                 // Full name of teacher that will display in message
                 $fullName = '';
-                if(empty($post['middle_name'])) 
-                {
+                if(empty($post['middle_name'])) {
                     $fullName = $post['first_name'] . ' ' . $post['last_name'];
-                }
-                else 
-                {
+                } else {
                     $fullName = $post['first_name'] . ' ' . $post['middle_name'][0] . '. ' . $post['last_name'];
                 }
 
@@ -87,8 +75,7 @@ class Student extends BaseController
         return view('student/add', $data);
     }
 
-    public function view($id) 
-    {
+    public function view($id) {
         // Selected one student by id with table genders and users using inner join and return it to view student page
         $studentModel = new \App\Models\StudentModel();
         $data['student'] = $studentModel->select('tbl_students.student_id, tbl_students.first_name, tbl_students.middle_name, tbl_students.last_name,
@@ -101,8 +88,7 @@ class Student extends BaseController
         return view('student/view', $data);
     }
 
-    public function edit($id) 
-    {
+    public function edit($id) {
         // Update selected student by id with table genders and users using inner join
         $studentModel = new \App\Models\StudentModel();
         $data['student'] = $studentModel->select('tbl_students.student_id, tbl_students.first_name, tbl_students.middle_name, tbl_students.last_name,
@@ -115,8 +101,7 @@ class Student extends BaseController
         helper(['form']);
 
         // When button save clicked
-        if($this->request->getMethod() == 'post') 
-        {
+        if($this->request->getMethod() == 'post') {
             // Get value from text fields
             $post = $this->request->getPost(['first_name', 'middle_name', 'last_name', 'gender', 'age', 'address', 'contact_number', 'email_address']);
 
@@ -131,21 +116,15 @@ class Student extends BaseController
                 'email_address' => ['label' => 'email address', 'rules' => 'required|valid_email']
             ];
 
-            if(!$this->validate($rules)) 
-            {
+            if(!$this->validate($rules)) {
                 $data['validation'] = $this->validator;
-            }
-            else 
-            {
+            } else {
                 // Return primary key of gender if already exist. Otherwise, insert and return primary key
                 $genderModel = new \App\Models\GenderModel();
 
-                if($genderId = $genderModel->where('gender', $post['gender'])->first()) 
-                {
+                if($genderId = $genderModel->where('gender', $post['gender'])->first()) {
                     $post['gender_id'] = $genderId->gender_id;
-                }
-                else 
-                {
+                } else {
                     $gender = ['gender' => $post['gender']];
                     $post['gender_id'] = $genderModel->insert($gender);
                 }
@@ -156,12 +135,9 @@ class Student extends BaseController
 
                 // Full name of teacher that will display in message
                 $fullName = '';
-                if(empty($post['middle_name'])) 
-                {
+                if(empty($post['middle_name'])) {
                     $fullName = $post['first_name'] . ' ' . $post['last_name'];
-                }
-                else 
-                {
+                } else {
                     $fullName = $post['first_name'] . ' ' . $post['middle_name'][0] . '. ' . $post['last_name'];
                 }
 
@@ -172,8 +148,7 @@ class Student extends BaseController
         return view('student/edit', $data);
     }
 
-    public function delete($id) 
-    {
+    public function delete($id) {
         // Select student by id and return to delete confirmation page
         $studentModel = new \App\Models\StudentModel();
         $data['student'] = $studentModel->select('tbl_students.student_id, tbl_students.first_name, tbl_students.middle_name, tbl_students.last_name,
@@ -184,8 +159,7 @@ class Student extends BaseController
         ->join('tbl_users', 'tbl_users.user_id = tbl_students.user_id')->find($id);
 
         // When button delete clicked
-        if($this->request->getMethod() == 'post') 
-        {
+        if($this->request->getMethod() == 'post') {
             // Delete the selected student
             $studentModel->delete($id);
             

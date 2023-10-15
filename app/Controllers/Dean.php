@@ -4,8 +4,7 @@ namespace App\Controllers;
 
 class Dean extends BaseController
 {
-    public function dashboard()
-    {
+    public function dashboard() {
         return view('dean/dashboard');
     }
 }

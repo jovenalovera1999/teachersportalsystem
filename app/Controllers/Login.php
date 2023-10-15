@@ -4,15 +4,13 @@ namespace App\Controllers;
 
 class Login extends BaseController
 {
-    public function login() 
-    {
+    public function login() {
         // Redirect to login page
         $data = array();
         helper(['form']);
 
         // When login button clicked
-        if($this->request->getMethod() == 'post') 
-        {
+        if($this->request->getMethod() == 'post') {
             // Get value from text field
             $post = $this->request->getPost(['email_address', 'password']);
 
@@ -22,12 +20,9 @@ class Login extends BaseController
                 'password' => ['label' => 'password', 'rules' => 'required']
             ];
 
-            if(!$this->validate($rules)) 
-            {
+            if(!$this->validate($rules)) {
                 $data['validation'] = $this->validator;
-            }
-            else 
-            {
+            } else {
                 // Login user with inner join
                 $userModel = new \App\Models\UserModel();
                 $user = $userModel->where('email_address', $post['email_address'])->where('password', sha1($post['password']))
@@ -36,21 +31,15 @@ class Login extends BaseController
 
                 $session = session();
 
-                if(!$user) 
-                {
+                if(!$user) {
                     $session->setflashdata('invalid', 'Invalid email address or password!');
-                }
-                else 
-                {
+                } else {
                     // Set user session and redirect them to page according to their position
                     $this->setUserSession($user);
 
-                    if($user->position == 'Dean') 
-                    {
+                    if($user->position == 'Dean') {
                         return redirect()->to('dean/dashboard');
-                    }
-                    else 
-                    {
+                    } else {
                         return redirect()->to('teacher/dashboard');
                     }
                 }
@@ -65,12 +54,9 @@ class Login extends BaseController
         // Set full name of the user
         $myFullName = '';
 
-        if(empty($user->middle_name)) 
-        {
+        if(empty($user->middle_name)) {
             $myFullName = $user->first_name . ' ' . $user->last_name;
-        }
-        else 
-        {
+        } else {
             $myFullName = $user->first_name . ' ' . $user->middle_name[0] . '. ' . $user->last_name;
         }
 
@@ -94,14 +80,12 @@ class Login extends BaseController
         session()->set($data);
     }
 
-    public function confirmLogout() 
-    {
+    public function confirmLogout() {
         // Redirect to confirm logout page
         return view('logout/logout');
     }
 
-    public function logout() 
-    {
+    public function logout() {
         // Logout user
         session()->destroy();
         return redirect()->to('/');
